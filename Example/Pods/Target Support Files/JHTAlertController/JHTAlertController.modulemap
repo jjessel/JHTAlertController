@@ -1,0 +1,6 @@
+framework module JHTAlertController {
+  umbrella header "JHTAlertController-umbrella.h"
+
+  export *
+  module * { export * }
+}

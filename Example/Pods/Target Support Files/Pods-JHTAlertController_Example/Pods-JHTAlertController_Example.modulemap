@@ -1,0 +1,6 @@
+framework module Pods_JHTAlertController_Example {
+  umbrella header "Pods-JHTAlertController_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

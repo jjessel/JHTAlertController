@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'JHTAlertController'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of JHTAlertController.'
+  s.summary          = 'A stock replacement for UIAlertController to customize the colors, fonts, and images to suit your needs.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+JHTAlertController is a replacement for the stock UIAlertController. With it, you can customize the background colors, text colors, and add images to the alert.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/JHTAlertController'
+  s.homepage         = 'https://github.com/jjessel/JHTAlertController'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'placeholder for master' => 'Jeremiah.Jessel@jacuzzi.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/JHTAlertController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'placeholder for master' => 'Jacuzzi Hot Tubs, LLC' }
+  s.source           = { :git => 'https://github.com/jjessel/JHTAlertController.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/jcubedapps'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'JHTAlertController/Classes/**/*'
   

@@ -1,0 +1,16 @@
+PODS:
+  - JHTAlertController (0.1.0)
+
+DEPENDENCIES:
+  - JHTAlertController (from `../`)
+
+EXTERNAL SOURCES:
+  JHTAlertController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JHTAlertController: db113ec79b2673b08a761f6820b40400551e9a0f
+
+PODFILE CHECKSUM: 4aa0b1fe38431f2bc4a6eedb98e878dad2a21c19
+
+COCOAPODS: 1.1.1

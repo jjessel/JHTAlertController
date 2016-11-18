@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12813BFC21D2E901BBAB9ED90FE961EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		1619EC79C8B3A6C1ACE8E9EDC6A337AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070D80F663C0BA05F553D3A00EB4B96 /* UIColor+Extension.swift */; };
+		6D0A4E3ACDFBBA132852A9E911871832 /* JHTAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA979974AA2AAADB5FAC23988F13586 /* JHTAlertController.swift */; };
+		7F30ABAC2AAC441CD2FAA5A0A4D45E35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		8D96B403E27F9DAD8424536707BBE59E /* Pods-JHTAlertController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB69F6CD3DEA1403F3250F35E38A395 /* Pods-JHTAlertController_Tests-dummy.m */; };
+		8F4478772CAEA6D046452E555D06818A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		AA62CFA03D9BAF6D6F24E62ADF6CB2BC /* Pods-JHTAlertController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F25F45A10D5D56FAA03B77D7DED868 /* Pods-JHTAlertController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B32BA27E66A0942A84990B398A7E6BCE /* JHTAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A94847E5538AB665558F8955CB87B64 /* JHTAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C059FEF3FF14B007F50FD4E24CCABF28 /* Pods-JHTAlertController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D008A30E7F0D093B5A4BFA891DB1EFE /* Pods-JHTAlertController_Example-dummy.m */; };
+		DB05A17567F61BE8E49126688A350D9A /* JHTAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A796A19E0B310D95663AF953C063DB6 /* JHTAlertAnimation.swift */; };
+		DC57D8093CAA6162803C4BF4992AE37B /* JHTAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C57013FF65CE99003C68EBAE641CAC /* JHTAlertController-dummy.m */; };
+		F765C9DF8516B5B1E291D3328B1E39D3 /* JHTAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72A26755B6E340E8578D378480D4FB4 /* JHTAlertAction.swift */; };
+		F76A60F82E7B46B88280B3043B951FCE /* Pods-JHTAlertController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 540C3F947FB84B9626873A31E9834989 /* Pods-JHTAlertController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33CE8880B8BE05729D579AB05A7F0CF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B96FD6274397EA343EF569E5B5C7B66;
+			remoteInfo = JHTAlertController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D3D15E814F356A80BD13F9117E52C4A /* JHTAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JHTAlertController.modulemap; sourceTree = "<group>"; };
+		113795B980A7BD0D00B2DE9CEEBCA8B6 /* Pods-JHTAlertController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JHTAlertController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A796A19E0B310D95663AF953C063DB6 /* JHTAlertAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JHTAlertAnimation.swift; sourceTree = "<group>"; };
+		2070D80F663C0BA05F553D3A00EB4B96 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		25B8860AAFF224B53E37C426730911BD /* JHTAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JHTAlertController.xcconfig; sourceTree = "<group>"; };
+		25C149627351FB0028BF16A70078396B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD348A5D2941D208935C17A52DBE9F7 /* Pods-JHTAlertController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHTAlertController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		2D8D7A9F82D064D245343FA8274D062C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4265211701A908D7D06C3D15C4EB37A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EF8DF90547B8C4911A6ACB1F1B17B82 /* Pods_JHTAlertController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JHTAlertController_Example.framework; path = "Pods-JHTAlertController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		540C3F947FB84B9626873A31E9834989 /* Pods-JHTAlertController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JHTAlertController_Example-umbrella.h"; sourceTree = "<group>"; };
+		59F25F45A10D5D56FAA03B77D7DED868 /* Pods-JHTAlertController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JHTAlertController_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5C0A56062A054ED98EAC0B96DD1B4831 /* JHTAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JHTAlertController-prefix.pch"; sourceTree = "<group>"; };
+		60DB04703CA8C4DB3F0160274F283D46 /* Pods-JHTAlertController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JHTAlertController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		62840636F0BCA2C1F1DCD8E5FB209D0D /* Pods-JHTAlertController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHTAlertController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		86E6A358386BB16DD9D30490CA0330C4 /* Pods-JHTAlertController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JHTAlertController_Example.modulemap"; sourceTree = "<group>"; };
+		8A94847E5538AB665558F8955CB87B64 /* JHTAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JHTAlertController-umbrella.h"; sourceTree = "<group>"; };
+		8D008A30E7F0D093B5A4BFA891DB1EFE /* Pods-JHTAlertController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JHTAlertController_Example-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		989FB9435DC787BC805C291C3632C21B /* Pods-JHTAlertController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHTAlertController_Tests-resources.sh"; sourceTree = "<group>"; };
+		A4C57013FF65CE99003C68EBAE641CAC /* JHTAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JHTAlertController-dummy.m"; sourceTree = "<group>"; };
+		ACB69F6CD3DEA1403F3250F35E38A395 /* Pods-JHTAlertController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JHTAlertController_Tests-dummy.m"; sourceTree = "<group>"; };
+		B24B3485050C793D91CD0F488BF3E9A9 /* Pods-JHTAlertController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JHTAlertController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B3E28FCE5B27C1A7BFE9F2B4FC6D6130 /* Pods-JHTAlertController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JHTAlertController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C2C8C0E373478775B16D5483A764DDC0 /* Pods-JHTAlertController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JHTAlertController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C569C89548AA34E55EE5285B92504FCA /* Pods-JHTAlertController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JHTAlertController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D1DC52CA0581134C6E91307823667B2B /* Pods_JHTAlertController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JHTAlertController_Tests.framework; path = "Pods-JHTAlertController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72A26755B6E340E8578D378480D4FB4 /* JHTAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JHTAlertAction.swift; sourceTree = "<group>"; };
+		D791AF6AA4086F557838F8B5160FE12A /* JHTAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JHTAlertController.framework; path = JHTAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9EF94E22B476794391CD5AF9BFC273F /* Pods-JHTAlertController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JHTAlertController_Tests.modulemap"; sourceTree = "<group>"; };
+		DBA716F7696A1DC72B69E4B8989E9888 /* Pods-JHTAlertController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JHTAlertController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E27AD309898A2728353046D5C58D005A /* Pods-JHTAlertController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHTAlertController_Example-resources.sh"; sourceTree = "<group>"; };
+		F1D9075BE959A1AF122053FBFF61C332 /* Pods-JHTAlertController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JHTAlertController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		FCA979974AA2AAADB5FAC23988F13586 /* JHTAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JHTAlertController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16E9913C8F449A3B0D6E62F91B171E6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F30ABAC2AAC441CD2FAA5A0A4D45E35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C4A48C6A095AC18D4EC2657F8E899C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F4478772CAEA6D046452E555D06818A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF976D6E97E5E1CFB5E2D597D91F5AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12813BFC21D2E901BBAB9ED90FE961EB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02658000D152F687F5419F4143EF33C7 /* Pods-JHTAlertController_Example */ = {
+			isa = PBXGroup;
+			children = (
+				2D8D7A9F82D064D245343FA8274D062C /* Info.plist */,
+				86E6A358386BB16DD9D30490CA0330C4 /* Pods-JHTAlertController_Example.modulemap */,
+				60DB04703CA8C4DB3F0160274F283D46 /* Pods-JHTAlertController_Example-acknowledgements.markdown */,
+				F1D9075BE959A1AF122053FBFF61C332 /* Pods-JHTAlertController_Example-acknowledgements.plist */,
+				8D008A30E7F0D093B5A4BFA891DB1EFE /* Pods-JHTAlertController_Example-dummy.m */,
+				62840636F0BCA2C1F1DCD8E5FB209D0D /* Pods-JHTAlertController_Example-frameworks.sh */,
+				E27AD309898A2728353046D5C58D005A /* Pods-JHTAlertController_Example-resources.sh */,
+				540C3F947FB84B9626873A31E9834989 /* Pods-JHTAlertController_Example-umbrella.h */,
+				DBA716F7696A1DC72B69E4B8989E9888 /* Pods-JHTAlertController_Example.debug.xcconfig */,
+				B3E28FCE5B27C1A7BFE9F2B4FC6D6130 /* Pods-JHTAlertController_Example.release.xcconfig */,
+			);
+			name = "Pods-JHTAlertController_Example";
+			path = "Target Support Files/Pods-JHTAlertController_Example";
+			sourceTree = "<group>";
+		};
+		1E8FF1CC21891A2C0AA307A2F47A0473 /* JHTAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				3D152E7A5489E0C813E3EE8564C8BF87 /* JHTAlertController */,
+				8985AA5F4853C5A57F55961B49150623 /* Support Files */,
+			);
+			name = JHTAlertController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2C282ACE3EE9F7ED6AC16570553A73BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D791AF6AA4086F557838F8B5160FE12A /* JHTAlertController.framework */,
+				4EF8DF90547B8C4911A6ACB1F1B17B82 /* Pods_JHTAlertController_Example.framework */,
+				D1DC52CA0581134C6E91307823667B2B /* Pods_JHTAlertController_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D152E7A5489E0C813E3EE8564C8BF87 /* JHTAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				4826F506BF040B3D1C18935122440E8B /* Classes */,
+			);
+			name = JHTAlertController;
+			path = JHTAlertController;
+			sourceTree = "<group>";
+		};
+		410D64DE750165DBE7055044D33CE3A9 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E8FF1CC21891A2C0AA307A2F47A0473 /* JHTAlertController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		4826F506BF040B3D1C18935122440E8B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D72A26755B6E340E8578D378480D4FB4 /* JHTAlertAction.swift */,
+				1A796A19E0B310D95663AF953C063DB6 /* JHTAlertAnimation.swift */,
+				FCA979974AA2AAADB5FAC23988F13586 /* JHTAlertController.swift */,
+				2070D80F663C0BA05F553D3A00EB4B96 /* UIColor+Extension.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		712551BF28179DE1A6FF84B0E492BC0E /* Pods-JHTAlertController_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4265211701A908D7D06C3D15C4EB37A2 /* Info.plist */,
+				D9EF94E22B476794391CD5AF9BFC273F /* Pods-JHTAlertController_Tests.modulemap */,
+				B24B3485050C793D91CD0F488BF3E9A9 /* Pods-JHTAlertController_Tests-acknowledgements.markdown */,
+				C569C89548AA34E55EE5285B92504FCA /* Pods-JHTAlertController_Tests-acknowledgements.plist */,
+				ACB69F6CD3DEA1403F3250F35E38A395 /* Pods-JHTAlertController_Tests-dummy.m */,
+				2AD348A5D2941D208935C17A52DBE9F7 /* Pods-JHTAlertController_Tests-frameworks.sh */,
+				989FB9435DC787BC805C291C3632C21B /* Pods-JHTAlertController_Tests-resources.sh */,
+				59F25F45A10D5D56FAA03B77D7DED868 /* Pods-JHTAlertController_Tests-umbrella.h */,
+				113795B980A7BD0D00B2DE9CEEBCA8B6 /* Pods-JHTAlertController_Tests.debug.xcconfig */,
+				C2C8C0E373478775B16D5483A764DDC0 /* Pods-JHTAlertController_Tests.release.xcconfig */,
+			);
+			name = "Pods-JHTAlertController_Tests";
+			path = "Target Support Files/Pods-JHTAlertController_Tests";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		77DA0F13D3D8B84D604320F54716BDB0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				02658000D152F687F5419F4143EF33C7 /* Pods-JHTAlertController_Example */,
+				712551BF28179DE1A6FF84B0E492BC0E /* Pods-JHTAlertController_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				410D64DE750165DBE7055044D33CE3A9 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2C282ACE3EE9F7ED6AC16570553A73BE /* Products */,
+				77DA0F13D3D8B84D604320F54716BDB0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8985AA5F4853C5A57F55961B49150623 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25C149627351FB0028BF16A70078396B /* Info.plist */,
+				0D3D15E814F356A80BD13F9117E52C4A /* JHTAlertController.modulemap */,
+				25B8860AAFF224B53E37C426730911BD /* JHTAlertController.xcconfig */,
+				A4C57013FF65CE99003C68EBAE641CAC /* JHTAlertController-dummy.m */,
+				5C0A56062A054ED98EAC0B96DD1B4831 /* JHTAlertController-prefix.pch */,
+				8A94847E5538AB665558F8955CB87B64 /* JHTAlertController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JHTAlertController";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		07BCE02BEA694253158A1ED7829BE885 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76A60F82E7B46B88280B3043B951FCE /* Pods-JHTAlertController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333AB84478B5D1753E69547B87B8804D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA62CFA03D9BAF6D6F24E62ADF6CB2BC /* Pods-JHTAlertController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409168F405E27AAA1650ECAFA90B5446 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32BA27E66A0942A84990B398A7E6BCE /* JHTAlertController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B96FD6274397EA343EF569E5B5C7B66 /* JHTAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4BA808FEE66C223B0FC82EFDFC5C9DA /* Build configuration list for PBXNativeTarget "JHTAlertController" */;
+			buildPhases = (
+				522FA0AF7B741D8BAA9EFFAE0FA1D26F /* Sources */,
+				FAF976D6E97E5E1CFB5E2D597D91F5AA /* Frameworks */,
+				409168F405E27AAA1650ECAFA90B5446 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JHTAlertController;
+			productName = JHTAlertController;
+			productReference = D791AF6AA4086F557838F8B5160FE12A /* JHTAlertController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A111CBDFABA023612FC3F7A4268506FD /* Pods-JHTAlertController_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00AD79779C192CAD443A69E4C1EF83E6 /* Build configuration list for PBXNativeTarget "Pods-JHTAlertController_Tests" */;
+			buildPhases = (
+				F07E4BB6970EC7ADADAE118280F833C3 /* Sources */,
+				68C4A48C6A095AC18D4EC2657F8E899C /* Frameworks */,
+				333AB84478B5D1753E69547B87B8804D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JHTAlertController_Tests";
+			productName = "Pods-JHTAlertController_Tests";
+			productReference = D1DC52CA0581134C6E91307823667B2B /* Pods_JHTAlertController_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CA6A319198A90614CF55168F53771868 /* Pods-JHTAlertController_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D522E0CC94F7F2E273ACCB56F6EFC65 /* Build configuration list for PBXNativeTarget "Pods-JHTAlertController_Example" */;
+			buildPhases = (
+				79242CD36A4776954F2BF0C8740EA635 /* Sources */,
+				16E9913C8F449A3B0D6E62F91B171E6E /* Frameworks */,
+				07BCE02BEA694253158A1ED7829BE885 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DB420953624A75BD96DB33CD0088E61 /* PBXTargetDependency */,
+			);
+			name = "Pods-JHTAlertController_Example";
+			productName = "Pods-JHTAlertController_Example";
+			productReference = 4EF8DF90547B8C4911A6ACB1F1B17B82 /* Pods_JHTAlertController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2C282ACE3EE9F7ED6AC16570553A73BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B96FD6274397EA343EF569E5B5C7B66 /* JHTAlertController */,
+				CA6A319198A90614CF55168F53771868 /* Pods-JHTAlertController_Example */,
+				A111CBDFABA023612FC3F7A4268506FD /* Pods-JHTAlertController_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		522FA0AF7B741D8BAA9EFFAE0FA1D26F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F765C9DF8516B5B1E291D3328B1E39D3 /* JHTAlertAction.swift in Sources */,
+				DB05A17567F61BE8E49126688A350D9A /* JHTAlertAnimation.swift in Sources */,
+				DC57D8093CAA6162803C4BF4992AE37B /* JHTAlertController-dummy.m in Sources */,
+				6D0A4E3ACDFBBA132852A9E911871832 /* JHTAlertController.swift in Sources */,
+				1619EC79C8B3A6C1ACE8E9EDC6A337AE /* UIColor+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79242CD36A4776954F2BF0C8740EA635 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C059FEF3FF14B007F50FD4E24CCABF28 /* Pods-JHTAlertController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F07E4BB6970EC7ADADAE118280F833C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D96B403E27F9DAD8424536707BBE59E /* Pods-JHTAlertController_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DB420953624A75BD96DB33CD0088E61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JHTAlertController;
+			target = 4B96FD6274397EA343EF569E5B5C7B66 /* JHTAlertController */;
+			targetProxy = 33CE8880B8BE05729D579AB05A7F0CF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C5BE3B8965D8FE09EE080AD792C408D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3E28FCE5B27C1A7BFE9F2B4FC6D6130 /* Pods-JHTAlertController_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JHTAlertController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JHTAlertController_Example/Pods-JHTAlertController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JHTAlertController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		835C4F2FC4A3D14C5CBF6247448C4F2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C8C0E373478775B16D5483A764DDC0 /* Pods-JHTAlertController_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JHTAlertController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JHTAlertController_Tests/Pods-JHTAlertController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JHTAlertController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9231304A85F0B648738E75DE5271D4A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25B8860AAFF224B53E37C426730911BD /* JHTAlertController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JHTAlertController/JHTAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JHTAlertController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JHTAlertController/JHTAlertController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JHTAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9771515369E5BA0DB3B91030F552A17C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25B8860AAFF224B53E37C426730911BD /* JHTAlertController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JHTAlertController/JHTAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JHTAlertController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JHTAlertController/JHTAlertController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JHTAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF5881062634DC490EEC42D0067359AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBA716F7696A1DC72B69E4B8989E9888 /* Pods-JHTAlertController_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JHTAlertController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JHTAlertController_Example/Pods-JHTAlertController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JHTAlertController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD59B84A70DB823FAC7EDFE464521863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 113795B980A7BD0D00B2DE9CEEBCA8B6 /* Pods-JHTAlertController_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JHTAlertController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JHTAlertController_Tests/Pods-JHTAlertController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JHTAlertController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00AD79779C192CAD443A69E4C1EF83E6 /* Build configuration list for PBXNativeTarget "Pods-JHTAlertController_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD59B84A70DB823FAC7EDFE464521863 /* Debug */,
+				835C4F2FC4A3D14C5CBF6247448C4F2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D522E0CC94F7F2E273ACCB56F6EFC65 /* Build configuration list for PBXNativeTarget "Pods-JHTAlertController_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5881062634DC490EEC42D0067359AD /* Debug */,
+				3C5BE3B8965D8FE09EE080AD792C408D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4BA808FEE66C223B0FC82EFDFC5C9DA /* Build configuration list for PBXNativeTarget "JHTAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9771515369E5BA0DB3B91030F552A17C /* Debug */,
+				9231304A85F0B648738E75DE5271D4A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
