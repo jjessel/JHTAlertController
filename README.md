@@ -17,13 +17,8 @@ let cancelAction = JHTAlertAction(title: "Cancel", style: .cancel,  handler: nil
 
 // Create an action with a completionl handler.
 let okAction = JHTAlertAction(title: "Ok", style: .default) { _ in
-<<<<<<< HEAD
-print("Do something here!")
+   print("Do something here!")
 }
-=======
-         print("Do something here!")
-      }
->>>>>>> ea2976a5ff1d289ebbd1f0815d3896a7e5b57584
 
 // Add the actions to the alert.
 alertController.addAction(cancelAction)
