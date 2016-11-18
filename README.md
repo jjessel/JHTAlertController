@@ -4,7 +4,9 @@
 [![License](https://img.shields.io/cocoapods/l/JHTAlertController.svg?style=flat)](http://cocoapods.org/pods/JHTAlertController/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/JHTAlertController.svg?style=flat)](http://cocoapods.org/pods/JHTAlertController)
 
-
+![alt tag](https://github.com/jjessel/JHTAlertController/blob/master/img/dark.PNG)
+![alt tag](https://github.com/jjessel/JHTAlertController/blob/master/img/light.PNG)
+![alt tag](https://github.com/jjessel/JHTAlertController/blob/master/img/icon.PNG)
 
 ## Easy to use
 JHTAlertController can be used as a replacement for the stock `UIAlertController`.
