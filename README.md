@@ -9,7 +9,8 @@
 ![alt tag](https://github.com/jjessel/JHTAlertController/blob/master/img/icon.PNG)
 
 ## Easy to use
-JHTAlertController can be used as a replacement for the stock `UIAlertController`.
+JHTAlertController is an easy to use replacement for `UIAlertController`. You can customize the appearance of your alert to match the theme of your app.
+
 ```swift
 // Setting up an alert with a title and message
 let alertController = JHTAlertController(title: "Turtle", message: "In this alert we use a String for the title instead of an image.", preferredStyle: .alert)
