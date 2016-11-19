@@ -22,6 +22,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    var isAlert: Bool { return preferredStyle == .alert }
    
    private var shapeLayer = CAShapeLayer()
+   private var iconBackgroundRadius: CGFloat = 45.0
    
    // ContainerView for all Alert Components
    private var containerView = UIView()
@@ -72,7 +73,9 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          updateTitleImage()
       }
    }
-   
+  
+   private var iconImageView: UIImageView?
+  
    // MessageView
    private var messageView = UIView()
    private var messageLabel = UILabel()
@@ -150,7 +153,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       // Setup Image Circle
       if iconImage != nil {
          
-         let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.view.frame.maxX / 2,y: containerView.center.y * 1.65), radius: CGFloat(40), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+         let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.view.frame.maxX / 2,y: containerView.center.y * 1.65), radius: CGFloat(iconBackgroundRadius), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
          
          shapeLayer = CAShapeLayer()
          shapeLayer.path = circlePath.cgPath
@@ -158,11 +161,11 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          //change the fill color
          shapeLayer.fillColor = titleViewBackgroundColor.cgColor
          view.layer.insertSublayer(shapeLayer, below: containerView.layer)
-         let imageView = UIImageView(image: iconImage)
-         view.addSubview(imageView)
-         imageView.translatesAutoresizingMaskIntoConstraints = false
-         let centerX = NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
-         let centerY = NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 5)
+         iconImageView = UIImageView(image: iconImage)
+         view.addSubview(iconImageView!)
+         iconImageView!.translatesAutoresizingMaskIntoConstraints = false
+         let centerX = NSLayoutConstraint(item: iconImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
+         let centerY = NSLayoutConstraint(item: iconImageView, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 5)
 
          view.addConstraints([centerX, centerY])
          
@@ -291,6 +294,17 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       
       view.addConstraints([trailing, leading, top, bottom])
    }
+  
+  private func updateIconImage() {
+    if iconImageView != nil {
+      let imageOffset = iconBackgroundRadius / 2
+      var buttonOffset:CGFloat = 0.0
+      if buttonContainerView.arrangedSubviews.count > 2 {
+        buttonOffset = 45.0 * CGFloat(buttonContainerView.arrangedSubviews.count - 2)
+      }
+      shapeLayer.position = CGPoint(x: iconImageView!.center.x - imageOffset, y: iconImageView!.center.y + imageOffset - buttonOffset)
+    }
+  }
 
    // MARK: Public Methods
    
@@ -323,6 +337,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       // Add button to list and stackview
       buttons.append(button)
       buttonContainerView.addArrangedSubview(button)
+      updateIconImage()
    }
    
    // Convenience to add multiple actions
