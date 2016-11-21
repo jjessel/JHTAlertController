@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JHTAlertController'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A stock replacement for UIAlertController to customize the colors, fonts, and images to suit your needs.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ JHTAlertController is a replacement for the stock UIAlertController. With it, yo
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'JHTAlertController/Classes/**/*'
+  s.source_files = 'Source/*.swift'
   
   # s.resource_bundles = {
   #   'JHTAlertController' => ['JHTAlertController/Assets/*.png']
