@@ -8,16 +8,28 @@
 
 import UIKit
 
+/// Used to represent the style of the alert action
+///
+/// - default: will display with standard font choice
+///
+/// - cancel: will display with a bold tyle font
+///
+/// - destructive: will display with red text color to indicate a destructive behavior
 public enum JHTAlertActionStyle : Int {
    case `default`, cancel, destructive
 }
 
+/// Used to represent the style of the alert
+///
+/// - actionSheet: an alert that slides from the bottom
+///
+/// - alert: an alert that is diplayed in the center of the view
 public enum JHTAlertControllerStyle : Int {
    case actionSheet, alert
 }
 
 public class JHTAlertController: UIViewController, UIViewControllerTransitioningDelegate {
-   
+   // MARK: Configuring the Alert
    private(set) var preferredStyle: JHTAlertControllerStyle!
    
    /// Is the alert style of .alert
@@ -134,6 +146,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       .destructive  : UIColor(red:0.38, green:0.38, blue:0.38, alpha:1.0)
    ]
    
+   // MARK: Initialization and Setup
    
    /// Initialize the JHTAlertController
    ///

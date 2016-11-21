@@ -16,6 +16,15 @@ public class JHTAlertAction: NSObject, NSCopying {
    var bgColor: UIColor?
    var isEnabled = true
    
+   // MARK: JHTAlertAction Setup
+   
+   /// Initialize the JHTAlertAction
+   ///
+   /// - Parameters:
+   ///   - title: the title of the action
+   ///   - style: the action style
+   ///   - bgColor: the background color of the action
+   ///   - handler: the handler to fire when interacted with
    required public init(title: String, style: JHTAlertActionStyle, bgColor: UIColor? = nil, handler: ((JHTAlertAction) -> Void)!) {
       self.title = title
       self.style = style
@@ -23,6 +32,11 @@ public class JHTAlertAction: NSObject, NSCopying {
       self.handler = handler
    }
    
+   
+   /// Conformance to NSCopying
+   ///
+   /// - Parameter zone: the zone
+   /// - Returns: returns a copy of JHTAlertAction
    public func copy(with zone: NSZone? = nil) -> Any {
       let copy = type(of: self).init(title: title, style: style, bgColor: bgColor, handler: handler)
       copy.isEnabled = self.isEnabled

@@ -21,6 +21,8 @@ public class JHTAlertAnimation : NSObject, UIViewControllerAnimatedTransitioning
       self.isPresenting = isPresenting
    }
    
+   // MARK: Transition Animations
+   
    /// The duration of the animation.
    ///
    /// - Parameter transitionContext: the context of the animation
@@ -29,6 +31,9 @@ public class JHTAlertAnimation : NSObject, UIViewControllerAnimatedTransitioning
       return isPresenting ? 0.2 : 0.2
    }
    
+   /// Calls the appropriate animatation
+   ///
+   /// - Parameter transitionContext: the context of the animation
    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
       if isPresenting {
          self.presentAnimateTransition(transitionContext)

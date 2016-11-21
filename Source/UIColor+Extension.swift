@@ -11,6 +11,8 @@ import UIKit
 
 public extension UIColor {
    
+   // MARK: Appearances
+   
    /// A lighter representation of the color
    ///
    /// - Returns: the lighter color
@@ -32,6 +34,12 @@ public extension UIColor {
       return UIColor()
    }
    
+   /// Creates an image with a specified color
+   ///
+   /// - Parameters:
+   ///   - color: the color to create an image from
+   ///   - size: the size of the image
+   /// - Returns: the image with the color specified
    class func imageWithColor(_ color: UIColor, size: CGSize = CGSize(width: 60, height: 60)) -> UIImage {
       let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
       UIGraphicsBeginImageContext(rect.size)
