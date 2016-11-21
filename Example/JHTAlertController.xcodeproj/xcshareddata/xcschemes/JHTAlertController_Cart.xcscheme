@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "JHTAlertController_Example.app"
-               BlueprintName = "JHTAlertController_Example"
-               ReferencedContainer = "container:JHTAlertController.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "JHTAlertController_Tests.xctest"
-               BlueprintName = "JHTAlertController_Tests"
+               BlueprintIdentifier = "DA3A54021DE3A135000F068A"
+               BuildableName = "JHTAlertController_Cart.framework"
+               BlueprintName = "JHTAlertController_Cart"
                ReferencedContainer = "container:JHTAlertController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,19 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "JHTAlertController_Tests.xctest"
-               BlueprintName = "JHTAlertController_Tests"
-               ReferencedContainer = "container:JHTAlertController.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA3A53D71DE39D2F000F068A"
-               BuildableName = "JHTAlertController_CarthageTests.xctest"
-               BlueprintName = "JHTAlertController_CarthageTests"
+               BlueprintIdentifier = "DA3A540A1DE3A136000F068A"
+               BuildableName = "JHTAlertController_CartTests.xctest"
+               BlueprintName = "JHTAlertController_CartTests"
                ReferencedContainer = "container:JHTAlertController.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -66,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "JHTAlertController_Example.app"
-            BlueprintName = "JHTAlertController_Example"
+            BlueprintIdentifier = "DA3A54021DE3A135000F068A"
+            BuildableName = "JHTAlertController_Cart.framework"
+            BlueprintName = "JHTAlertController_Cart"
             ReferencedContainer = "container:JHTAlertController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "JHTAlertController_Example.app"
-            BlueprintName = "JHTAlertController_Example"
+            BlueprintIdentifier = "DA3A54021DE3A135000F068A"
+            BuildableName = "JHTAlertController_Cart.framework"
+            BlueprintName = "JHTAlertController_Cart"
             ReferencedContainer = "container:JHTAlertController.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -104,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "JHTAlertController_Example.app"
-            BlueprintName = "JHTAlertController_Example"
+            BlueprintIdentifier = "DA3A54021DE3A135000F068A"
+            BuildableName = "JHTAlertController_Cart.framework"
+            BlueprintName = "JHTAlertController_Cart"
             ReferencedContainer = "container:JHTAlertController.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
