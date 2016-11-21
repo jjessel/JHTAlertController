@@ -22,21 +22,13 @@ JHTAlertController is a replacement for the stock UIAlertController. With it, yo
                        DESC
 
   s.homepage         = 'https://github.com/jjessel/JHTAlertController'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'placeholder for master' => 'Jacuzzi Hot Tubs, LLC' }
   s.source           = { :git => 'https://github.com/jjessel/JHTAlertController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/jcubedapps'
+  s.social_media_url = 'https://twitter.com/jcubedapps'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Source/*.swift'
-  
-  # s.resource_bundles = {
-  #   'JHTAlertController' => ['JHTAlertController/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
