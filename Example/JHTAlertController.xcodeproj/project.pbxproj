@@ -15,13 +15,11 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		A92E1DBF6044A9F807157BED /* Pods_JHTAlertController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4136F1BB2AFE689ED638AA /* Pods_JHTAlertController_Example.framework */; };
 		D544109D512C938CC625DAEC /* Pods_JHTAlertController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0519F8363D61174D9E33F4E2 /* Pods_JHTAlertController_Tests.framework */; };
-		DA3A540C1DE3A136000F068A /* JHTAlertController_Cart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3A54031DE3A135000F068A /* JHTAlertController_Cart.framework */; };
-		DA3A54111DE3A136000F068A /* JHTAlertController_CartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A54101DE3A136000F068A /* JHTAlertController_CartTests.swift */; };
-		DA3A54131DE3A136000F068A /* JHTAlertController_Cart.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3A54051DE3A135000F068A /* JHTAlertController_Cart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA3A541E1DE3A155000F068A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A541A1DE3A155000F068A /* UIColor+Extension.swift */; };
-		DA3A541F1DE3A155000F068A /* JHTAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A541B1DE3A155000F068A /* JHTAlertAction.swift */; };
-		DA3A54201DE3A155000F068A /* JHTAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A541C1DE3A155000F068A /* JHTAlertAnimation.swift */; };
-		DA3A54211DE3A155000F068A /* JHTAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A541D1DE3A155000F068A /* JHTAlertController.swift */; };
+		DA3A542B1DE3A309000F068A /* JHTAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3A54291DE3A309000F068A /* JHTAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA3A54331DE3A315000F068A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A542F1DE3A315000F068A /* UIColor+Extension.swift */; };
+		DA3A54341DE3A315000F068A /* JHTAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A54301DE3A315000F068A /* JHTAlertAction.swift */; };
+		DA3A54351DE3A315000F068A /* JHTAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A54311DE3A315000F068A /* JHTAlertAnimation.swift */; };
+		DA3A54361DE3A315000F068A /* JHTAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A54321DE3A315000F068A /* JHTAlertController.swift */; };
 		DAEC83A41DDF4CD40069D09A /* Turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = DAEC83A31DDF4CD40069D09A /* Turtle.png */; };
 /* End PBXBuildFile section */
 
@@ -32,13 +30,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = JHTAlertController;
-		};
-		DA3A540D1DE3A136000F068A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA3A54021DE3A135000F068A;
-			remoteInfo = JHTAlertController_Cart;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -76,16 +67,13 @@
 		C593C442AD38B1650D34BC32 /* Pods-JHTAlertController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHTAlertController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JHTAlertController_Tests/Pods-JHTAlertController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DA3A53DF1DE39D2F000F068A /* JHTAlertController_CarthageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHTAlertController_CarthageTests.swift; sourceTree = "<group>"; };
 		DA3A53E11DE39D2F000F068A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA3A54031DE3A135000F068A /* JHTAlertController_Cart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JHTAlertController_Cart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA3A54051DE3A135000F068A /* JHTAlertController_Cart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHTAlertController_Cart.h; sourceTree = "<group>"; };
-		DA3A54061DE3A135000F068A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA3A540B1DE3A136000F068A /* JHTAlertController_CartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHTAlertController_CartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA3A54101DE3A136000F068A /* JHTAlertController_CartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHTAlertController_CartTests.swift; sourceTree = "<group>"; };
-		DA3A54121DE3A136000F068A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA3A541A1DE3A155000F068A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../Source/UIColor+Extension.swift"; sourceTree = "<group>"; };
-		DA3A541B1DE3A155000F068A /* JHTAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertAction.swift; path = ../../Source/JHTAlertAction.swift; sourceTree = "<group>"; };
-		DA3A541C1DE3A155000F068A /* JHTAlertAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertAnimation.swift; path = ../../Source/JHTAlertAnimation.swift; sourceTree = "<group>"; };
-		DA3A541D1DE3A155000F068A /* JHTAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertController.swift; path = ../../Source/JHTAlertController.swift; sourceTree = "<group>"; };
+		DA3A54271DE3A309000F068A /* JHTAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JHTAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3A54291DE3A309000F068A /* JHTAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHTAlertController.h; sourceTree = "<group>"; };
+		DA3A542A1DE3A309000F068A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3A542F1DE3A315000F068A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../Source/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		DA3A54301DE3A315000F068A /* JHTAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertAction.swift; path = ../../Source/JHTAlertAction.swift; sourceTree = "<group>"; };
+		DA3A54311DE3A315000F068A /* JHTAlertAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertAnimation.swift; path = ../../Source/JHTAlertAnimation.swift; sourceTree = "<group>"; };
+		DA3A54321DE3A315000F068A /* JHTAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertController.swift; path = ../../Source/JHTAlertController.swift; sourceTree = "<group>"; };
 		DAEC83A31DDF4CD40069D09A /* Turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turtle.png; sourceTree = "<group>"; };
 		F706E5E0F596B327966E0AE6 /* Pods-JHTAlertController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHTAlertController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHTAlertController_Tests/Pods-JHTAlertController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,18 +95,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA3A53FF1DE3A135000F068A /* Frameworks */ = {
+		DA3A54231DE3A309000F068A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA3A54081DE3A136000F068A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DA3A540C1DE3A136000F068A /* JHTAlertController_Cart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +112,7 @@
 				607FACD21AFB9204008FA782 /* Example for JHTAlertController */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				DA3A53DE1DE39D2F000F068A /* JHTAlertController_CarthageTests */,
-				DA3A54041DE3A135000F068A /* JHTAlertController_Cart */,
-				DA3A540F1DE3A136000F068A /* JHTAlertController_CartTests */,
+				DA3A54281DE3A309000F068A /* JHTAlertController */,
 				607FACD11AFB9204008FA782 /* Products */,
 				E68CF9621C53475453438B5E /* Pods */,
 				95210C0013AFC2AA902F3212 /* Frameworks */,
@@ -145,8 +124,7 @@
 			children = (
 				607FACD01AFB9204008FA782 /* JHTAlertController_Example.app */,
 				607FACE51AFB9204008FA782 /* JHTAlertController_Tests.xctest */,
-				DA3A54031DE3A135000F068A /* JHTAlertController_Cart.framework */,
-				DA3A540B1DE3A136000F068A /* JHTAlertController_CartTests.xctest */,
+				DA3A54271DE3A309000F068A /* JHTAlertController.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,26 +197,17 @@
 			path = JHTAlertController_CarthageTests;
 			sourceTree = "<group>";
 		};
-		DA3A54041DE3A135000F068A /* JHTAlertController_Cart */ = {
+		DA3A54281DE3A309000F068A /* JHTAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				DA3A541A1DE3A155000F068A /* UIColor+Extension.swift */,
-				DA3A541B1DE3A155000F068A /* JHTAlertAction.swift */,
-				DA3A541C1DE3A155000F068A /* JHTAlertAnimation.swift */,
-				DA3A541D1DE3A155000F068A /* JHTAlertController.swift */,
-				DA3A54051DE3A135000F068A /* JHTAlertController_Cart.h */,
-				DA3A54061DE3A135000F068A /* Info.plist */,
+				DA3A542F1DE3A315000F068A /* UIColor+Extension.swift */,
+				DA3A54301DE3A315000F068A /* JHTAlertAction.swift */,
+				DA3A54311DE3A315000F068A /* JHTAlertAnimation.swift */,
+				DA3A54321DE3A315000F068A /* JHTAlertController.swift */,
+				DA3A54291DE3A309000F068A /* JHTAlertController.h */,
+				DA3A542A1DE3A309000F068A /* Info.plist */,
 			);
-			path = JHTAlertController_Cart;
-			sourceTree = "<group>";
-		};
-		DA3A540F1DE3A136000F068A /* JHTAlertController_CartTests */ = {
-			isa = PBXGroup;
-			children = (
-				DA3A54101DE3A136000F068A /* JHTAlertController_CartTests.swift */,
-				DA3A54121DE3A136000F068A /* Info.plist */,
-			);
-			path = JHTAlertController_CartTests;
+			path = JHTAlertController;
 			sourceTree = "<group>";
 		};
 		E68CF9621C53475453438B5E /* Pods */ = {
@@ -255,11 +224,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DA3A54001DE3A135000F068A /* Headers */ = {
+		DA3A54241DE3A309000F068A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA3A54131DE3A136000F068A /* JHTAlertController_Cart.h in Headers */,
+				DA3A542B1DE3A309000F068A /* JHTAlertController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,41 +277,23 @@
 			productReference = 607FACE51AFB9204008FA782 /* JHTAlertController_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DA3A54021DE3A135000F068A /* JHTAlertController_Cart */ = {
+		DA3A54261DE3A309000F068A /* JHTAlertController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA3A54141DE3A136000F068A /* Build configuration list for PBXNativeTarget "JHTAlertController_Cart" */;
+			buildConfigurationList = DA3A542C1DE3A309000F068A /* Build configuration list for PBXNativeTarget "JHTAlertController" */;
 			buildPhases = (
-				DA3A53FE1DE3A135000F068A /* Sources */,
-				DA3A53FF1DE3A135000F068A /* Frameworks */,
-				DA3A54001DE3A135000F068A /* Headers */,
-				DA3A54011DE3A135000F068A /* Resources */,
+				DA3A54221DE3A309000F068A /* Sources */,
+				DA3A54231DE3A309000F068A /* Frameworks */,
+				DA3A54241DE3A309000F068A /* Headers */,
+				DA3A54251DE3A309000F068A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = JHTAlertController_Cart;
-			productName = JHTAlertController_Cart;
-			productReference = DA3A54031DE3A135000F068A /* JHTAlertController_Cart.framework */;
+			name = JHTAlertController;
+			productName = JHTAlertController;
+			productReference = DA3A54271DE3A309000F068A /* JHTAlertController.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		DA3A540A1DE3A136000F068A /* JHTAlertController_CartTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DA3A54171DE3A136000F068A /* Build configuration list for PBXNativeTarget "JHTAlertController_CartTests" */;
-			buildPhases = (
-				DA3A54071DE3A136000F068A /* Sources */,
-				DA3A54081DE3A136000F068A /* Frameworks */,
-				DA3A54091DE3A136000F068A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DA3A540E1DE3A136000F068A /* PBXTargetDependency */,
-			);
-			name = JHTAlertController_CartTests;
-			productName = JHTAlertController_CartTests;
-			productReference = DA3A540B1DE3A136000F068A /* JHTAlertController_CartTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -364,11 +315,7 @@
 						LastSwiftMigration = 0810;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
-					DA3A54021DE3A135000F068A = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-					};
-					DA3A540A1DE3A136000F068A = {
+					DA3A54261DE3A309000F068A = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 8TXUP5R8B7;
 						ProvisioningStyle = Automatic;
@@ -390,8 +337,7 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* JHTAlertController_Example */,
 				607FACE41AFB9204008FA782 /* JHTAlertController_Tests */,
-				DA3A54021DE3A135000F068A /* JHTAlertController_Cart */,
-				DA3A540A1DE3A136000F068A /* JHTAlertController_CartTests */,
+				DA3A54261DE3A309000F068A /* JHTAlertController */,
 			);
 		};
 /* End PBXProject section */
@@ -415,14 +361,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA3A54011DE3A135000F068A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA3A54091DE3A136000F068A /* Resources */ = {
+		DA3A54251DE3A309000F068A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -542,22 +481,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA3A53FE1DE3A135000F068A /* Sources */ = {
+		DA3A54221DE3A309000F068A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA3A541E1DE3A155000F068A /* UIColor+Extension.swift in Sources */,
-				DA3A54211DE3A155000F068A /* JHTAlertController.swift in Sources */,
-				DA3A54201DE3A155000F068A /* JHTAlertAnimation.swift in Sources */,
-				DA3A541F1DE3A155000F068A /* JHTAlertAction.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA3A54071DE3A136000F068A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DA3A54111DE3A136000F068A /* JHTAlertController_CartTests.swift in Sources */,
+				DA3A54331DE3A315000F068A /* UIColor+Extension.swift in Sources */,
+				DA3A54361DE3A315000F068A /* JHTAlertController.swift in Sources */,
+				DA3A54351DE3A315000F068A /* JHTAlertAnimation.swift in Sources */,
+				DA3A54341DE3A315000F068A /* JHTAlertAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,11 +499,6 @@
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* JHTAlertController_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
-		};
-		DA3A540E1DE3A136000F068A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DA3A54021DE3A135000F068A /* JHTAlertController_Cart */;
-			targetProxy = DA3A540D1DE3A136000F068A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -757,26 +683,25 @@
 			};
 			name = Release;
 		};
-		DA3A54151DE3A136000F068A /* Debug */ = {
+		DA3A542D1DE3A309000F068A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8TXUP5R8B7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = JHTAlertController_Cart/Info.plist;
+				INFOPLIST_FILE = JHTAlertController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.prolink.JHTAlertController-Cart";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prolink.JHTAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -787,7 +712,7 @@
 			};
 			name = Debug;
 		};
-		DA3A54161DE3A136000F068A /* Release */ = {
+		DA3A542E1DE3A309000F068A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
@@ -796,57 +721,21 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8TXUP5R8B7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = JHTAlertController_Cart/Info.plist;
+				INFOPLIST_FILE = JHTAlertController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.prolink.JHTAlertController-Cart";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prolink.JHTAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DA3A54181DE3A136000F068A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 8TXUP5R8B7;
-				INFOPLIST_FILE = JHTAlertController_CartTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.prolink.JHTAlertController-CartTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		DA3A54191DE3A136000F068A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = 8TXUP5R8B7;
-				INFOPLIST_FILE = JHTAlertController_CartTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.prolink.JHTAlertController-CartTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -880,19 +769,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA3A54141DE3A136000F068A /* Build configuration list for PBXNativeTarget "JHTAlertController_Cart" */ = {
+		DA3A542C1DE3A309000F068A /* Build configuration list for PBXNativeTarget "JHTAlertController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA3A54151DE3A136000F068A /* Debug */,
-				DA3A54161DE3A136000F068A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		DA3A54171DE3A136000F068A /* Build configuration list for PBXNativeTarget "JHTAlertController_CartTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DA3A54181DE3A136000F068A /* Debug */,
-				DA3A54191DE3A136000F068A /* Release */,
+				DA3A542D1DE3A309000F068A /* Debug */,
+				DA3A542E1DE3A309000F068A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
