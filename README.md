@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/JHTAlertController.svg?style=flat)](http://cocoapods.org/pods/JHTAlertController)
 [![License](https://img.shields.io/cocoapods/l/JHTAlertController.svg?style=flat)](http://cocoapods.org/pods/JHTAlertController/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/JHTAlertController.svg?style=flat)](http://cocoapods.org/pods/JHTAlertController)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ![alt tag](https://github.com/jjessel/JHTAlertController/blob/master/img/dark.PNG)
 ![alt tag](https://github.com/jjessel/JHTAlertController/blob/master/img/light.PNG)
