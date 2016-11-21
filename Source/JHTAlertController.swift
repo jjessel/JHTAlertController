@@ -140,22 +140,49 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    // Button configurations
    private var buttons = [UIButton]()
    private var cancelButtonTag = 0
-   private var buttonFont: [JHTAlertActionStyle : UIFont] = [
+   
+   /// The default fonts for actions
+   ///
+   /// - default: Avenir-Roman, 18
+   /// 
+   /// - cancel: Avenir-Black, 18
+   ///
+   /// - destructive: Avenir-Roman, 18
+   private(set) var buttonFont: [JHTAlertActionStyle : UIFont] = [
       .default : UIFont(name: "Avenir-Roman", size: 18)!,
       .cancel  : UIFont(name: "Avenir-Black", size: 18)!,
       .destructive  : UIFont(name: "Avenir-Roman", size: 18)!
    ]
-   private var buttonTextColor: [JHTAlertActionStyle : UIColor] = [
+   
+   /// The default text colors for actions
+   ///
+   /// - default: white
+   ///
+   /// - cancel: white
+   ///
+   /// - destructive: red
+   private(set) var buttonTextColor: [JHTAlertActionStyle : UIColor] = [
       .default : UIColor.white,
       .cancel  : UIColor.white,
       .destructive  : UIColor.red
    ]
    
-   private var buttonBackgroundColor: [JHTAlertActionStyle : UIColor] = [
+   /// The default background colors for the actions
+   ///
+   /// - default: grey
+   ///
+   /// - cancel: grey
+   ///
+   /// - destructive: grey
+   private(set) var buttonBackgroundColor: [JHTAlertActionStyle : UIColor] = [
       .default : UIColor(red:0.38, green:0.38, blue:0.38, alpha:1.0),
       .cancel  : UIColor(red:0.38, green:0.38, blue:0.38, alpha:1.0),
       .destructive  : UIColor(red:0.38, green:0.38, blue:0.38, alpha:1.0)
    ]
+   /// the number of actions added to the alert
+   public var actionCount: Int {
+      return buttonContainerView.arrangedSubviews.count
+   }
    
    // MARK: Initialization and Setup
    
