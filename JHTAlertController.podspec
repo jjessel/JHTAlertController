@@ -29,6 +29,6 @@ JHTAlertController is a replacement for the stock UIAlertController. With it, yo
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Source/*.swift'
+  s.source_files = 'Source/*'
 
 end
