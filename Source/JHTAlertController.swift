@@ -12,11 +12,16 @@ import UIKit
 ///
 /// - default: will display with standard font choice
 ///
-/// - cancel: will display with a bold tyle font
+/// - cancel: will display with a bold style font
 ///
 /// - destructive: will display with red text color to indicate a destructive behavior
 public enum JHTAlertActionStyle : Int {
-   case `default`, cancel, destructive
+   /// will display with standard font choice
+   case `default`
+   /// will display with a bold style font
+   case cancel
+   /// will display with red text color to indicate a destructive behavior
+   case destructive
 }
 
 /// Used to represent the style of the alert
@@ -25,7 +30,10 @@ public enum JHTAlertActionStyle : Int {
 ///
 /// - alert: an alert that is diplayed in the center of the view
 public enum JHTAlertControllerStyle : Int {
-   case actionSheet, alert
+   /// an alert that slides from the bottom
+   case actionSheet
+   ///  an alert that is diplayed in the center of the view
+   case alert
 }
 
 public class JHTAlertController: UIViewController, UIViewControllerTransitioningDelegate {
@@ -106,11 +114,13 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    // MessageView
    private var messageView = UIView()
    private var messageLabel = UILabel()
+   /// The font for the alert message
    public var messageFont = UIFont(name: "Avenir-Roman", size: 16) {
       didSet {
          messageLabel.font = messageFont
       }
    }
+   /// The text color for the alert message
    public var messageTextColor = UIColor.white {
       didSet {
          messageLabel.textColor = messageTextColor
@@ -123,6 +133,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    
    private var buttonActions: [JHTAlertAction] = []
    private var defaultButton = UIButton()
+   /// The separator color between the actions and the message
    public var dividerColor = UIColor.white
    private var borderWidth: CGFloat = 0.5
    
@@ -277,6 +288,9 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       
    }
    
+   /// The standard view controller life cycle viewWillAppear
+   ///
+   /// - Parameter animated: an animated appearance
    override public func viewWillAppear(_ animated: Bool) {
       
       // Setup ButtonContainerView
@@ -443,10 +457,22 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    }
    
    // MARK: UIViewControllerTransitioningDelegate Methods
+   
+   /// Asks your delegate for the transition animator object to use when presenting a view controller.
+   ///
+   /// - Parameters:
+   ///   - presented: The view controller object that is about to be presented onscreen.
+   ///   - presenting: The view controller that is presenting the view controller in the presented parameter. The object in this parameter could be the root view controller of the window, a parent view controller that is marked as defining the current context, or the last view controller that was presented. This view controller may or may not be the same as the one in the source parameter.
+   ///   - source: The view controller whose present(_:animated:completion:) method was called.
+   /// - Returns: The animator object to use when presenting the view controller or nil if you do not want to present the view controller using a custom transition. The object you return should be capable of performing a fixed-length animation that is not interactive.
    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
       return JHTAlertAnimation(isPresenting: true)
    }
    
+   /// Asks your delegate for the transition animator object to use when dismissing a view controller.
+   ///
+   /// - Parameter dismissed: The view controller object that is about to be dismissed.
+   /// - Returns: The animator object to use when dismissing the view controller or nil if you do not want to dismiss the view controller using a custom transition. The object you return should be capable of performing a fixed-length animation that is not interactive.
    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
       return JHTAlertAnimation(isPresenting: false)
    }
