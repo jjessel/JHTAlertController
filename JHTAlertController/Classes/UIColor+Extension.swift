@@ -10,10 +10,17 @@ import UIKit
 
 
 public extension UIColor {
+   
+   /// A lighter representation of the color
+   ///
+   /// - Returns: the lighter color
    public func lightColor() -> UIColor {
       return self.withAlphaComponent(0.5)
    }
    
+   /// A darker representation of the color
+   ///
+   /// - Returns: the darker color
    public func darker() -> UIColor {
       
       var r:CGFloat = 0, g:CGFloat = 0, b:CGFloat = 0, a:CGFloat = 0
@@ -40,6 +47,10 @@ public extension UIColor {
       return image;
    }
    
+   /// Creates an image with a specified color
+   ///
+   /// - Parameter size: the size of the image
+   /// - Returns: the image with the color specified
    public func imageWithColor(size: CGSize = CGSize(width: 60, height: 60)) -> UIImage {
       let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
       UIGraphicsBeginImageContext(rect.size)

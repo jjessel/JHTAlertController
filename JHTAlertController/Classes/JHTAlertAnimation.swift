@@ -10,12 +10,21 @@ import UIKit
 
 public class JHTAlertAnimation : NSObject, UIViewControllerAnimatedTransitioning {
    
+   /// Lets the animation transition know if the alert is presenting or dismissing
    let isPresenting: Bool
    
+   
+   /// The initialization of the JHTAlertAnimation
+   ///
+   /// - Parameter isPresenting: a Bool that determines if the alert is presenting or dismissing
    init(isPresenting: Bool) {
       self.isPresenting = isPresenting
    }
    
+   /// The duration of the animation.
+   ///
+   /// - Parameter transitionContext: the context of the animation
+   /// - Returns: a time interval that differes if the alert is presenting or dismissing
    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
       return isPresenting ? 0.2 : 0.2
    }
@@ -28,6 +37,9 @@ public class JHTAlertAnimation : NSObject, UIViewControllerAnimatedTransitioning
       }
    }
    
+   /// Presents the alert animation
+   ///
+   /// - Parameter transitionContext: the context for the animation
    func presentAnimateTransition(_ transitionContext: UIViewControllerContextTransitioning) {
       
       guard let alertController = transitionContext.viewController(forKey: .to) as? JHTAlertController else {
@@ -57,6 +69,9 @@ public class JHTAlertAnimation : NSObject, UIViewControllerAnimatedTransitioning
       })
    }
    
+   /// The dismiss animation for the alert
+   ///
+   /// - Parameter transitionContext: the context for the animation
    func dismissAnimateTransition(_ transitionContext: UIViewControllerContextTransitioning) {
       let alertController = transitionContext.viewController(forKey: .from) as! JHTAlertController
       let containerView = transitionContext.containerView

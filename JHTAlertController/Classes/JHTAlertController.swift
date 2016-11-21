@@ -19,6 +19,8 @@ public enum JHTAlertControllerStyle : Int {
 public class JHTAlertController: UIViewController, UIViewControllerTransitioningDelegate {
    
    private(set) var preferredStyle: JHTAlertControllerStyle!
+   
+   /// Is the alert style of .alert
    var isAlert: Bool { return preferredStyle == .alert }
    
    private var shapeLayer = CAShapeLayer()
@@ -27,11 +29,15 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    // ContainerView for all Alert Components
    private var containerView = UIView()
    private var containerViewWidth: CGFloat = 270.0
+   
+   /// The corner radius for the alert
    public var cornerRadius: CGFloat = 15.0 {
       didSet {
          containerView.layer.cornerRadius = self.cornerRadius
       }
    }
+   
+   /// Defines whether the alert has rounded corners
    public var hasRoundedCorners = true {
       didSet {
          if hasRoundedCorners {
@@ -41,6 +47,8 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          }
       }
    }
+   
+   /// The background color for the message area of the alert
    public var alertBackgroundColor = UIColor(red:0.38, green:0.38, blue:0.38, alpha:1.0) {
       didSet {
          containerView.backgroundColor = alertBackgroundColor
@@ -50,6 +58,8 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    // TitleSection
    private var titleView = UIView()
    private let titleViewHeight: CGFloat = 45.0
+   
+   /// The background color for the title block
    public var titleViewBackgroundColor = UIColor.black {
       didSet {
          titleView.backgroundColor = titleViewBackgroundColor
@@ -57,17 +67,22 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       }
    }
    private var titleLabel = UILabel()
+   
+   /// The font to be used for the title block
    public var titleFont = UIFont(name: "Avenir-Roman", size: 22) {
       didSet {
          titleLabel.font = titleFont
       }
    }
+   
+   /// The text color for the title block
    public var titleTextColor = UIColor.white {
       didSet {
          titleLabel.textColor = titleTextColor
       }
    }
    
+   /// The image to be used in the title block
    public var titleImage: UIImage? {
       didSet {
          updateTitleImage()
@@ -120,6 +135,13 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    ]
    
    
+   /// Initialize the JHTAlertController
+   ///
+   /// - Parameters:
+   ///   - title: the title to be displayed on the alert. If there is a title image added later, the title text will not be visible.
+   ///   - message: the message to be displayed in the alert
+   ///   - preferredStyle: the style of the alert
+   ///   - iconImage: an icon image to be added. If there is no icon image specified, the alert will appear like the stock alert. If there is one specified, a round area will display at the top of the alert.
    required convenience public init(title: String, message: String, preferredStyle: JHTAlertControllerStyle, iconImage: UIImage? = nil) {
       self.init(nibName: nil, bundle: nil)
 
@@ -277,7 +299,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       }
    }
    
-   // Update the title image if it was added after initialization
+   /// Update the title image if it was added after initialization
    private func updateTitleImage() {
       guard titleImage != nil else { return }
       let imageView = UIImageView()
@@ -295,6 +317,8 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       view.addConstraints([trailing, leading, top, bottom])
    }
   
+   
+  /// Updates the icon image based on the height of the alert.
   private func updateIconImage() {
     if iconImageView != nil {
       let imageOffset = iconBackgroundRadius / 2
@@ -308,7 +332,9 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
 
    // MARK: Public Methods
    
-   // Adds an action to be presented in the alert.
+   /// Adds an action to be presented in the alert.
+   ///
+   /// - Parameter action: the action to be added to the alert
    public func addAction(_ action: JHTAlertAction) {
       
       // Add action to list
@@ -340,14 +366,20 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       updateIconImage()
    }
    
-   // Convenience to add multiple actions
+   
+   /// Convenience method to add multiple actions to the alert
+   ///
+   /// - Parameter actions: an array of JHTAlertAction
    public func addActions(_ actions: [JHTAlertAction]) {
       for action in actions {
          addAction(action)
       }
    }
    
-   // Handle the button action press
+   
+   /// The handler method for the action. This is where the code is executed.
+   ///
+   /// - Parameter sender: the UIButton that was pressed
    public func buttonTapped(sender: UIButton) {
       sender.isSelected = true
       let action = buttonActions[sender.tag - 1]
@@ -357,19 +389,40 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       self.dismiss(animated: true, completion: nil)
    }
    
-   // Set the font for a specific action style
+   
+   /// Set the font for an individual action style. This method needs to be called before the actions are added to the alert.
+   ///
+   /// - Parameters:
+   ///   - action: the type of action to apply the font to
+   ///   - font: the font to be applied
    public func setButtonFontFor(_ action: JHTAlertActionStyle, to font: UIFont) {
       buttonFont[action] = font
    }
    
+   
+   /// Set the text color for an individual action style. This method needs to be called before the actions are added to the alert.
+   ///
+   /// - Parameters:
+   ///   - action: the type of action to apply the text color to
+   ///   - color: the color to be applied
    public func setButtonTextColorFor(_ action: JHTAlertActionStyle, to color: UIColor) {
       buttonTextColor[action] = color
    }
    
+   
+   /// Set the background color for an individual action style. This method needs to be called before the actions are added to the alert.
+   ///
+   /// - Parameters:
+   ///   - action: the type of action to apply the background color to
+   ///   - color: the color to be applied
    public func setButtonBackgroundColorFor( _ action: JHTAlertActionStyle, to color: UIColor) {
       buttonBackgroundColor[action] = color
    }
    
+   
+   /// An easy way to change all the colors of the actions to one color
+   ///
+   /// - Parameter color: the color to be applied
    public func setAllButtonBackgroundColors(to color: UIColor) {
       buttonBackgroundColor[JHTAlertActionStyle.default] = color
       buttonBackgroundColor[JHTAlertActionStyle.destructive] = color
