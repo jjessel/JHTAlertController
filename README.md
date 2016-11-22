@@ -102,12 +102,26 @@ iOS 9.0 and higher
 
 ## Installation
 
+### CocoaPods
 JHTAlertController is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "JHTAlertController"
 ```
+### Carthage
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage using Homebrew:
+```
+$ brew update
+$ brew install carthage
+```
+To add JHTAlertController to your Xcode project using Carthage, update your Cartfile:
+```
+github "jjessel/JHTAlertController" ~> 0.1.5
+```
+Run ```carthage update``` to build the framework and drag the built JHTAlertController.framework into your Xcode project.
 
 ## Author
 
