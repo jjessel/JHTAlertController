@@ -102,6 +102,15 @@ class ViewController: UIViewController {
       
       alertController.addTextFieldWithConfigurationHandler { (textField) in
          textField.placeholder = "Some Info Here"
+         textField.backgroundColor = .black
+         textField.textColor = .white
+      }
+      
+      alertController.addTextFieldWithConfigurationHandler { (textField) in
+         textField.placeholder = "Password"
+         textField.backgroundColor = .black
+         textField.isSecureTextEntry = true
+         textField.textColor = .white
       }
       
       // Show alert

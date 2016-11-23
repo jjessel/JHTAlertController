@@ -187,15 +187,18 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    
    // MARK:  Textfield
    private let textFieldHeight: CGFloat = 30.0
-   private let textFieldCornerRadius: CGFloat = 4.0
-   public private(set) var textFields: [UITextField]?
+   /// The textfields that have been added to the alert
+   public private(set) var textFields: [JHTTextField]?
    /// The background color of the text field. The default color is white.
    var textFieldBackgroundColor = UIColor.white
-   // The color of the border outline for the text field. The default color is gray.
+   /// The color of the border outline for the text field. The default color is gray.
    var textFieldBorderColor = UIColor.gray
-   // The type of border around the text field. Default is none
+   /// The type of border around the text field. Default is none
    var textFieldBorderStyle = UITextBorderStyle.none
    private var textFieldContainerView = UIStackView()
+   /// An override for the textfield to have rounded corners
+   public var textFieldHasRoundedCorners = true
+   private let textFieldCornerRadius: CGFloat = 4.0
    
    // MARK:- Initialization and Setup
    
@@ -238,16 +241,6 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       
       // Setup Image Circle
       if iconImage != nil {
-         
-         let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.view.frame.maxX / 2,y: containerView.center.y * 1.65), radius: CGFloat(iconBackgroundRadius), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
-         
-         shapeLayer = CAShapeLayer()
-         shapeLayer.path = circlePath.cgPath
-         
-         //change the fill color
-         shapeLayer.fillColor = titleViewBackgroundColor.cgColor
-         
-         view.layer.insertSublayer(shapeLayer, below: containerView.layer)
          iconImageView = UIImageView(image: iconImage)
          view.addSubview(iconImageView!)
          iconImageView!.translatesAutoresizingMaskIntoConstraints = false
@@ -334,6 +327,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       textFieldContainerView.distribution = .fillEqually
       textFieldContainerView.alignment = .fill
       textFieldContainerView.axis = .vertical
+      textFieldContainerView.spacing = 4
       
       containerView.addSubview(textFieldContainerView)
       
@@ -374,6 +368,8 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          border.borderColor = dividerColor.cgColor
          border.frame = CGRect(x: 0, y: 0, width: btn.frame.size.width + 2, height: btn.frame.size.height + 2)
          btn.layer.addSublayer(border)
+         
+         updateIconImage()
       }
       
       // Setup TextFieldContainerView Constraints
@@ -413,7 +409,30 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
   /// Updates the icon image based on the height of the alert.
    private func updateIconImage() {
       if iconImageView != nil {
-         shapeLayer.position = iconImageView!.frame.origin
+         
+         let shapeView = UIView(frame: iconImageView!.frame)
+         shapeView.clipsToBounds = true
+         
+         shapeView.translatesAutoresizingMaskIntoConstraints = false
+         view.insertSubview(shapeView, belowSubview: containerView)
+         let centerXConstraint = NSLayoutConstraint(item: shapeView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
+         let centerYConstraint = NSLayoutConstraint(item: shapeView, attribute: .centerY, relatedBy: .equal, toItem: iconImageView, attribute: .centerY, multiplier: 1.0, constant: 5)
+         let heightConstraint = NSLayoutConstraint(item: shapeView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: iconBackgroundRadius * 2.2)
+         let widthConstraint = NSLayoutConstraint(item: shapeView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: iconBackgroundRadius * 2.2)
+         view.addConstraints([centerXConstraint,
+                              centerYConstraint,
+                              heightConstraint,
+                              widthConstraint])
+         
+         let circlePath = UIBezierPath(arcCenter: CGPoint(x: shapeView.frame.maxX,y: shapeView.frame.maxY), radius: CGFloat(iconBackgroundRadius), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+         
+         shapeLayer = CAShapeLayer()
+         shapeLayer.path = circlePath.cgPath
+         
+         //change the fill color
+         shapeLayer.fillColor = titleViewBackgroundColor.cgColor
+         
+         shapeView.layer.addSublayer(shapeLayer)
       }
    }
 
@@ -450,7 +469,6 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       // Add button to list and stackview
       buttons.append(button)
       buttonContainerView.addArrangedSubview(button)
-      updateIconImage()
    }
    
    /// Convenience method to add multiple actions to the alert
@@ -513,8 +531,8 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    /// Add a text fiel to the alert
    ///
    /// - Parameter configurationHandler: the copletion of the textfield
-   public func addTextFieldWithConfigurationHandler(configurationHandler: ((UITextField) -> Void)!) {
-      var textField = UITextField()
+   public func addTextFieldWithConfigurationHandler(configurationHandler: ((JHTTextField) -> Void)!) {
+      var textField = JHTTextField()
       textField.frame.size = CGSize(width: containerViewWidth, height: textFieldHeight)
       textField.borderStyle = textFieldBorderStyle
       textField.delegate = self
@@ -527,17 +545,23 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          textFields = []
       }
       
+      if textFieldHasRoundedCorners {
+         textField.layer.cornerRadius = textFieldCornerRadius
+         textField.clipsToBounds = true
+      }
+      
       textFields!.append(textField)
       textFieldContainerView.addArrangedSubview(textField)
-      updateIconImage()
    }
    
+   /// The textfield will resign the first responder
+   ///
+   /// - Parameter textField: the textfield that was pressed
+   /// - Returns: should return value
    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
       textField.resignFirstResponder()
       return true
    }
-   
-   
    
    // MARK:- UIViewControllerTransitioningDelegate Methods
    

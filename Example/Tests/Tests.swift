@@ -117,6 +117,13 @@ class Tests: XCTestCase {
       XCTAssertEqual(alert.actionCount, 2)
    }
    
+   func testAddTextFields() {
+      alert.addTextFieldWithConfigurationHandler { (textfield) in
+         textfield.placeholder = "Test"
+      }
+      XCTAssertEqual(alert.textFields?.count, 1)
+   }
+   
    
    
    

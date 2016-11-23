@@ -16,6 +16,7 @@
 		AA62CFA03D9BAF6D6F24E62ADF6CB2BC /* Pods-JHTAlertController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F25F45A10D5D56FAA03B77D7DED868 /* Pods-JHTAlertController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B32BA27E66A0942A84990B398A7E6BCE /* JHTAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D033A547CC247B7FE3D7BEE4D85FAC1 /* JHTAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C059FEF3FF14B007F50FD4E24CCABF28 /* Pods-JHTAlertController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D008A30E7F0D093B5A4BFA891DB1EFE /* Pods-JHTAlertController_Example-dummy.m */; };
+		DAABD51E1DE616E600548B1B /* JHTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABD51D1DE616E600548B1B /* JHTTextField.swift */; };
 		DB05A17567F61BE8E49126688A350D9A /* JHTAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B5DA8D6BF78C0F4F57849E62C52F0 /* JHTAlertAnimation.swift */; };
 		DC57D8093CAA6162803C4BF4992AE37B /* JHTAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AC54713C75D3377E19124EC5F25D /* JHTAlertController-dummy.m */; };
 		F765C9DF8516B5B1E291D3328B1E39D3 /* JHTAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19551AF225379A16E5DB0F7C16B3871 /* JHTAlertAction.swift */; };
@@ -36,19 +37,19 @@
 		113795B980A7BD0D00B2DE9CEEBCA8B6 /* Pods-JHTAlertController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JHTAlertController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2AD348A5D2941D208935C17A52DBE9F7 /* Pods-JHTAlertController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHTAlertController_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		2D8D7A9F82D064D245343FA8274D062C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31CCEDFD12283F17EB3630C2DC692BC8 /* JHTAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JHTAlertController.modulemap; sourceTree = "<group>"; };
+		31CCEDFD12283F17EB3630C2DC692BC8 /* JHTAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JHTAlertController.modulemap; sourceTree = "<group>"; };
 		4265211701A908D7D06C3D15C4EB37A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491212DDB01D3F921949D855F8C4C2DC /* JHTAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JHTAlertController.xcconfig; sourceTree = "<group>"; };
 		4B8ADCC65657176738C5BCF0EB078A83 /* JHTAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JHTAlertController.swift; sourceTree = "<group>"; };
-		4EF8DF90547B8C4911A6ACB1F1B17B82 /* Pods_JHTAlertController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JHTAlertController_Example.framework; path = "Pods-JHTAlertController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EF8DF90547B8C4911A6ACB1F1B17B82 /* Pods_JHTAlertController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHTAlertController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		540C3F947FB84B9626873A31E9834989 /* Pods-JHTAlertController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JHTAlertController_Example-umbrella.h"; sourceTree = "<group>"; };
 		59F25F45A10D5D56FAA03B77D7DED868 /* Pods-JHTAlertController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JHTAlertController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		60DB04703CA8C4DB3F0160274F283D46 /* Pods-JHTAlertController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JHTAlertController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		62840636F0BCA2C1F1DCD8E5FB209D0D /* Pods-JHTAlertController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHTAlertController_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6B8B5DA8D6BF78C0F4F57849E62C52F0 /* JHTAlertAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JHTAlertAnimation.swift; sourceTree = "<group>"; };
-		86E6A358386BB16DD9D30490CA0330C4 /* Pods-JHTAlertController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JHTAlertController_Example.modulemap"; sourceTree = "<group>"; };
+		86E6A358386BB16DD9D30490CA0330C4 /* Pods-JHTAlertController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JHTAlertController_Example.modulemap"; sourceTree = "<group>"; };
 		8D008A30E7F0D093B5A4BFA891DB1EFE /* Pods-JHTAlertController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JHTAlertController_Example-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		989FB9435DC787BC805C291C3632C21B /* Pods-JHTAlertController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHTAlertController_Tests-resources.sh"; sourceTree = "<group>"; };
 		9D033A547CC247B7FE3D7BEE4D85FAC1 /* JHTAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JHTAlertController-umbrella.h"; sourceTree = "<group>"; };
 		ACB69F6CD3DEA1403F3250F35E38A395 /* Pods-JHTAlertController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JHTAlertController_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -60,9 +61,10 @@
 		C2C8C0E373478775B16D5483A764DDC0 /* Pods-JHTAlertController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JHTAlertController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C569C89548AA34E55EE5285B92504FCA /* Pods-JHTAlertController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JHTAlertController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D1DC52CA0581134C6E91307823667B2B /* Pods_JHTAlertController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JHTAlertController_Tests.framework; path = "Pods-JHTAlertController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D791AF6AA4086F557838F8B5160FE12A /* JHTAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JHTAlertController.framework; path = JHTAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9EF94E22B476794391CD5AF9BFC273F /* Pods-JHTAlertController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JHTAlertController_Tests.modulemap"; sourceTree = "<group>"; };
+		D1DC52CA0581134C6E91307823667B2B /* Pods_JHTAlertController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHTAlertController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D791AF6AA4086F557838F8B5160FE12A /* JHTAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JHTAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9EF94E22B476794391CD5AF9BFC273F /* Pods-JHTAlertController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JHTAlertController_Tests.modulemap"; sourceTree = "<group>"; };
+		DAABD51D1DE616E600548B1B /* JHTTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHTTextField.swift; sourceTree = "<group>"; };
 		DBA716F7696A1DC72B69E4B8989E9888 /* Pods-JHTAlertController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JHTAlertController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DBAA71DD786B53C40B045B56E608DF67 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E27AD309898A2728353046D5C58D005A /* Pods-JHTAlertController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JHTAlertController_Example-resources.sh"; sourceTree = "<group>"; };
@@ -211,8 +213,8 @@
 				6B8B5DA8D6BF78C0F4F57849E62C52F0 /* JHTAlertAnimation.swift */,
 				4B8ADCC65657176738C5BCF0EB078A83 /* JHTAlertController.swift */,
 				DBAA71DD786B53C40B045B56E608DF67 /* UIColor+Extension.swift */,
+				DAABD51D1DE616E600548B1B /* JHTTextField.swift */,
 			);
-			name = Source;
 			path = Source;
 			sourceTree = "<group>";
 		};
@@ -341,6 +343,7 @@
 			files = (
 				F765C9DF8516B5B1E291D3328B1E39D3 /* JHTAlertAction.swift in Sources */,
 				DB05A17567F61BE8E49126688A350D9A /* JHTAlertAnimation.swift in Sources */,
+				DAABD51E1DE616E600548B1B /* JHTTextField.swift in Sources */,
 				DC57D8093CAA6162803C4BF4992AE37B /* JHTAlertController-dummy.m in Sources */,
 				6D0A4E3ACDFBBA132852A9E911871832 /* JHTAlertController.swift in Sources */,
 				1619EC79C8B3A6C1ACE8E9EDC6A337AE /* UIColor+Extension.swift in Sources */,

@@ -20,6 +20,7 @@
 		DA3A54341DE3A315000F068A /* JHTAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A54301DE3A315000F068A /* JHTAlertAction.swift */; };
 		DA3A54351DE3A315000F068A /* JHTAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A54311DE3A315000F068A /* JHTAlertAnimation.swift */; };
 		DA3A54361DE3A315000F068A /* JHTAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A54321DE3A315000F068A /* JHTAlertController.swift */; };
+		DAABD5201DE6258D00548B1B /* JHTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABD51F1DE6258D00548B1B /* JHTTextField.swift */; };
 		DAEC83A41DDF4CD40069D09A /* Turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = DAEC83A31DDF4CD40069D09A /* Turtle.png */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		DA3A54301DE3A315000F068A /* JHTAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertAction.swift; path = ../../Source/JHTAlertAction.swift; sourceTree = "<group>"; };
 		DA3A54311DE3A315000F068A /* JHTAlertAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertAnimation.swift; path = ../../Source/JHTAlertAnimation.swift; sourceTree = "<group>"; };
 		DA3A54321DE3A315000F068A /* JHTAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTAlertController.swift; path = ../../Source/JHTAlertController.swift; sourceTree = "<group>"; };
+		DAABD51F1DE6258D00548B1B /* JHTTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHTTextField.swift; path = ../../Source/JHTTextField.swift; sourceTree = "<group>"; };
 		DAEC83A31DDF4CD40069D09A /* Turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turtle.png; sourceTree = "<group>"; };
 		F706E5E0F596B327966E0AE6 /* Pods-JHTAlertController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHTAlertController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHTAlertController_Tests/Pods-JHTAlertController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +207,7 @@
 				DA3A54311DE3A315000F068A /* JHTAlertAnimation.swift */,
 				DA3A54321DE3A315000F068A /* JHTAlertController.swift */,
 				DA3A54291DE3A309000F068A /* JHTAlertController.h */,
+				DAABD51F1DE6258D00548B1B /* JHTTextField.swift */,
 				DA3A542A1DE3A309000F068A /* Info.plist */,
 			);
 			path = JHTAlertController;
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAABD5201DE6258D00548B1B /* JHTTextField.swift in Sources */,
 				DA3A54331DE3A315000F068A /* UIColor+Extension.swift in Sources */,
 				DA3A54361DE3A315000F068A /* JHTAlertController.swift in Sources */,
 				DA3A54351DE3A315000F068A /* JHTAlertAnimation.swift in Sources */,
