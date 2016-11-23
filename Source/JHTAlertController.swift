@@ -36,7 +36,8 @@ public enum JHTAlertControllerStyle : Int {
    case alert
 }
 
-public class JHTAlertController: UIViewController, UIViewControllerTransitioningDelegate {
+/// The class for configuring and creating customizable alerts. See https://github.com/jjessel/JHTAlertController for more information.
+public class JHTAlertController: UIViewController, UIViewControllerTransitioningDelegate, UITextFieldDelegate {
    // MARK: Configuring the Alert
    private(set) var preferredStyle: JHTAlertControllerStyle!
    
@@ -46,7 +47,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    private var shapeLayer = CAShapeLayer()
    private var iconBackgroundRadius: CGFloat = 45.0
    
-   // ContainerView for all Alert Components
+   // MARK:  ContainerView for all Alert Components
    private var containerView = UIView()
    private var containerViewWidth: CGFloat = 270.0
    
@@ -75,7 +76,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       }
    }
    
-   // TitleSection
+   // MARK:  TitleSection
    private var titleView = UIView()
    private let titleViewHeight: CGFloat = 45.0
    
@@ -111,7 +112,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
   
    private var iconImageView: UIImageView?
   
-   // MessageView
+   // MARK:  MessageView
    private var messageView = UIView()
    private var messageLabel = UILabel()
    /// The font for the alert message
@@ -128,7 +129,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    }
    private var message: String!
    
-   // ButtonContainer
+   // MARK:  ButtonContainer
    private var buttonContainerView = UIStackView()
    
    private var buttonActions: [JHTAlertAction] = []
@@ -184,7 +185,19 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       return buttonContainerView.arrangedSubviews.count
    }
    
-   // MARK: Initialization and Setup
+   // MARK:  Textfield
+   private let textFieldHeight: CGFloat = 30.0
+   private let textFieldCornerRadius: CGFloat = 4.0
+   public private(set) var textFields: [UITextField]?
+   /// The background color of the text field. The default color is white.
+   var textFieldBackgroundColor = UIColor.white
+   // The color of the border outline for the text field. The default color is gray.
+   var textFieldBorderColor = UIColor.gray
+   // The type of border around the text field. Default is none
+   var textFieldBorderStyle = UITextBorderStyle.none
+   private var textFieldContainerView = UIStackView()
+   
+   // MARK:- Initialization and Setup
    
    /// Initialize the JHTAlertController
    ///
@@ -233,15 +246,16 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          
          //change the fill color
          shapeLayer.fillColor = titleViewBackgroundColor.cgColor
+         
          view.layer.insertSublayer(shapeLayer, below: containerView.layer)
          iconImageView = UIImageView(image: iconImage)
          view.addSubview(iconImageView!)
          iconImageView!.translatesAutoresizingMaskIntoConstraints = false
-         let centerX = NSLayoutConstraint(item: iconImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
-         let centerY = NSLayoutConstraint(item: iconImageView, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 5)
 
-         view.addConstraints([centerX, centerY])
-         
+         let imageCenterX = NSLayoutConstraint(item: iconImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
+         let imageCenterY = NSLayoutConstraint(item: iconImageView, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 5)
+         view.addConstraints([imageCenterX,
+                              imageCenterY])
       }
       
       // Setup TitleView
@@ -313,6 +327,16 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
                            messageLabelTrailingConstraint,
                            messageLabelBottomConstraint])
       
+      // Setup TextFieldContainerView
+      textFieldContainerView.frame.size = CGSize(width: containerViewWidth, height: 240.00)
+      textFieldContainerView.translatesAutoresizingMaskIntoConstraints = false
+      textFieldContainerView.clipsToBounds = true
+      textFieldContainerView.distribution = .fillEqually
+      textFieldContainerView.alignment = .fill
+      textFieldContainerView.axis = .vertical
+      
+      containerView.addSubview(textFieldContainerView)
+      
    }
    
    /// The standard view controller life cycle viewWillAppear
@@ -334,7 +358,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       let buttonContainerViewTrailingConstraint = NSLayoutConstraint(item: buttonContainerView, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1.0, constant: 0.0)
       let buttonContainerHeight = (buttonContainerView.arrangedSubviews.count > 2) ? titleViewHeight * CGFloat(buttons.count) : titleViewHeight
       let buttonContainerViewHeightConstraint = NSLayoutConstraint(item: buttonContainerView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: buttonContainerHeight)
-      let buttonContainerViewTopConstriant = NSLayoutConstraint(item: buttonContainerView, attribute: .top, relatedBy: .equal, toItem: messageView, attribute: .bottom, multiplier: 1.0, constant: 8.0)
+      let buttonContainerViewTopConstriant = NSLayoutConstraint(item: buttonContainerView, attribute: .top, relatedBy: .equal, toItem: textFieldContainerView, attribute: .bottom, multiplier: 1.0, constant: 8.0)
       let buttonContainerViewBottomConstraint = NSLayoutConstraint(item: buttonContainerView, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .bottom, multiplier: 1.0, constant: 0)
       
       view.addConstraints([buttonContainerViewLeadingConstraint,
@@ -351,6 +375,21 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          border.frame = CGRect(x: 0, y: 0, width: btn.frame.size.width + 2, height: btn.frame.size.height + 2)
          btn.layer.addSublayer(border)
       }
+      
+      // Setup TextFieldContainerView Constraints
+      
+      let textFieldContainerLeadingConstraint = NSLayoutConstraint(item: textFieldContainerView, attribute: .leading, relatedBy: .equal, toItem: messageView, attribute: .leading, multiplier: 1.0, constant: 10)
+      let textFieldContainerTrailingConstraint = NSLayoutConstraint(item: textFieldContainerView, attribute: .trailing, relatedBy: .equal, toItem: messageView, attribute: .trailing, multiplier: 1.0, constant: -10)
+      let textFieldContainerTopConstraint = NSLayoutConstraint(item: textFieldContainerView, attribute: .top, relatedBy: .equal, toItem: messageView, attribute: .bottom, multiplier: 1.0, constant: 8.0)
+      let textFieldContainerHeight = CGFloat(textFieldContainerView.arrangedSubviews.count) * textFieldHeight
+      let textFieldContainerHeightConstraint = NSLayoutConstraint(item: textFieldContainerView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: textFieldContainerHeight)
+      
+      view.addConstraints([textFieldContainerLeadingConstraint,
+                           textFieldContainerTrailingConstraint,
+                           textFieldContainerTopConstraint,
+                           textFieldContainerHeightConstraint])
+      
+      
    }
    
    /// Update the title image if it was added after initialization
@@ -371,20 +410,14 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       view.addConstraints([trailing, leading, top, bottom])
    }
   
-   
   /// Updates the icon image based on the height of the alert.
-  private func updateIconImage() {
-    if iconImageView != nil {
-      let imageOffset = iconBackgroundRadius / 2
-      var buttonOffset:CGFloat = 0.0
-      if buttonContainerView.arrangedSubviews.count > 2 {
-        buttonOffset = 45.0 * CGFloat(buttonContainerView.arrangedSubviews.count - 2)
+   private func updateIconImage() {
+      if iconImageView != nil {
+         shapeLayer.position = iconImageView!.frame.origin
       }
-      shapeLayer.position = CGPoint(x: iconImageView!.center.x - imageOffset, y: iconImageView!.center.y + imageOffset - buttonOffset)
-    }
-  }
+   }
 
-   // MARK: Public Methods
+   // MARK:- Public Methods
    
    /// Adds an action to be presented in the alert.
    ///
@@ -420,7 +453,6 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       updateIconImage()
    }
    
-   
    /// Convenience method to add multiple actions to the alert
    ///
    /// - Parameter actions: an array of JHTAlertAction
@@ -429,7 +461,6 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          addAction(action)
       }
    }
-   
    
    /// The handler method for the action. This is where the code is executed.
    ///
@@ -443,7 +474,6 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       self.dismiss(animated: true, completion: nil)
    }
    
-   
    /// Set the font for an individual action style. This method needs to be called before the actions are added to the alert.
    ///
    /// - Parameters:
@@ -452,7 +482,6 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    public func setButtonFontFor(_ action: JHTAlertActionStyle, to font: UIFont) {
       buttonFont[action] = font
    }
-   
    
    /// Set the text color for an individual action style. This method needs to be called before the actions are added to the alert.
    ///
@@ -463,7 +492,6 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       buttonTextColor[action] = color
    }
    
-   
    /// Set the background color for an individual action style. This method needs to be called before the actions are added to the alert.
    ///
    /// - Parameters:
@@ -472,7 +500,6 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    public func setButtonBackgroundColorFor( _ action: JHTAlertActionStyle, to color: UIColor) {
       buttonBackgroundColor[action] = color
    }
-   
    
    /// An easy way to change all the colors of the actions to one color
    ///
@@ -483,7 +510,36 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       buttonBackgroundColor[JHTAlertActionStyle.cancel] = color
    }
    
-   // MARK: UIViewControllerTransitioningDelegate Methods
+   /// Add a text fiel to the alert
+   ///
+   /// - Parameter configurationHandler: the copletion of the textfield
+   public func addTextFieldWithConfigurationHandler(configurationHandler: ((UITextField) -> Void)!) {
+      var textField = UITextField()
+      textField.frame.size = CGSize(width: containerViewWidth, height: textFieldHeight)
+      textField.borderStyle = textFieldBorderStyle
+      textField.delegate = self
+      
+      if configurationHandler != nil {
+         configurationHandler(textField)
+      }
+      
+      if textFields == nil {
+         textFields = []
+      }
+      
+      textFields!.append(textField)
+      textFieldContainerView.addArrangedSubview(textField)
+      updateIconImage()
+   }
+   
+   public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      textField.resignFirstResponder()
+      return true
+   }
+   
+   
+   
+   // MARK:- UIViewControllerTransitioningDelegate Methods
    
    /// Asks your delegate for the transition animator object to use when presenting a view controller.
    ///
@@ -504,8 +560,3 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       return JHTAlertAnimation(isPresenting: false)
    }
 }
-
-
-
-
-
