@@ -776,6 +776,7 @@
 				DA3A542E1DE3A309000F068A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -93,11 +93,16 @@ class ViewController: UIViewController {
       // Create the action.
       let cancelAction = JHTAlertAction(title: "Cancel", style: .cancel,  handler: nil)
       let okAction = JHTAlertAction(title: "Yes", style: .default) { _ in
-         print("Do something here!")
+         guard let textField = alertController.textFields?.first else { return }
+         print(textField.text!)
       }
       
       alertController.addAction(cancelAction)
       alertController.addAction(okAction)
+      
+      alertController.addTextFieldWithConfigurationHandler { (textField) in
+         textField.placeholder = "Some Info Here"
+      }
       
       // Show alert
       present(alertController, animated: true, completion: nil)
