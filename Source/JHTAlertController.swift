@@ -484,12 +484,12 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    ///
    /// - Parameter sender: the UIButton that was pressed
    public func buttonTapped(sender: UIButton) {
+      self.dismiss(animated: true, completion: nil)
       sender.isSelected = true
       let action = buttonActions[sender.tag - 1]
       if action.handler != nil {
          action.handler(action)
       }
-      self.dismiss(animated: true, completion: nil)
    }
    
    /// Set the font for an individual action style. This method needs to be called before the actions are added to the alert.
