@@ -367,10 +367,9 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          border.borderWidth = borderWidth
          border.borderColor = dividerColor.cgColor
          border.frame = CGRect(x: 0, y: 0, width: btn.frame.size.width + 2, height: btn.frame.size.height + 2)
-         btn.layer.addSublayer(border)
-         
-         updateIconImage()
+         btn.layer.addSublayer(border)  
       }
+      updateIconImage()
       
       // Setup TextFieldContainerView Constraints
       
