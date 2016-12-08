@@ -119,7 +119,7 @@ $ brew install carthage
 ```
 To add JHTAlertController to your Xcode project using Carthage, update your Cartfile:
 ```
-github "jjessel/JHTAlertController" ~> 0.2.1
+github "jjessel/JHTAlertController" ~> 0.2.2
 ```
 Run ```carthage update``` to build the framework and drag the built JHTAlertController.framework into your Xcode project.
 
