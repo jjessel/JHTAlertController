@@ -103,6 +103,13 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       }
     }
    
+   /// Restrict the height of the title block to the same as the button height
+   public var restrictTitleViewHeight = false {
+      didSet {
+         addTitleHeightConstraint()
+      }
+   }
+   
    /// The text color for the title block
    public var titleTextColor = UIColor.white {
       didSet {
@@ -267,13 +274,11 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       
       let titleViewLeadingConstraint = NSLayoutConstraint(item: titleView, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1.0, constant: 0.0)
       let titleViewTrailingConstraint = NSLayoutConstraint(item: titleView, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1.0, constant: 0.0)
-      let titleViewHeightConstraint = NSLayoutConstraint(item: titleView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: titleViewHeight)
       let titleViewTopConstriant = NSLayoutConstraint(item: titleView, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 0.0)
       
       view.addConstraints([titleViewLeadingConstraint,
                            titleViewTopConstriant,
-                           titleViewTrailingConstraint,
-                           titleViewHeightConstraint])
+                           titleViewTrailingConstraint])
       
       // Setup TitleLabel
       titleLabel.frame.size = titleView.frame.size
@@ -393,6 +398,14 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
                            textFieldContainerHeightConstraint])
       
       
+   }
+   
+   /// Add the title block constraint
+   private func addTitleHeightConstraint() {
+      if restrictTitleViewHeight {
+         let titleViewHeightConstraint = NSLayoutConstraint(item: titleView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: titleViewHeight)
+         view.addConstraint(titleViewHeightConstraint)
+      }
    }
    
    /// Update the title image if it was added after initialization
