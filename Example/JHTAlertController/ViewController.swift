@@ -78,7 +78,7 @@ class ViewController: UIViewController {
       present(alertController, animated: true, completion: nil)
    }
    @IBAction func iconAlert(_ sender: Any) {
-      let alertController = JHTAlertController(title: "Wow!", message: "You can even set an icon for the alert.", preferredStyle: .alert, iconImage: #imageLiteral(resourceName: "TurtleDark") )
+      let alertController = JHTAlertController(title: "Creating a long title message to test what happens when it is really long.!", message: "You can even set an icon for the alert.", preferredStyle: .alert, iconImage: #imageLiteral(resourceName: "TurtleDark") )
       alertController.titleViewBackgroundColor = .white
       alertController.titleTextColor = .black
       alertController.alertBackgroundColor = .white

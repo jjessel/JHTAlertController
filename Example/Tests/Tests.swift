@@ -124,6 +124,11 @@ class Tests: XCTestCase {
       XCTAssertEqual(alert.textFields?.count, 1)
    }
    
+   func testTitleLabelNumberOfLines() {
+      alert.titleNumberOfLines = 1
+      XCTAssertEqual(alert.titleNumberOfLines, 1)
+   }
+   
    
    
    
