@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JHTAlertController'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'A stock replacement for UIAlertController to customize the colors, fonts, and images to suit your needs.'
 
   s.description      = <<-DESC

@@ -275,10 +275,12 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       let titleViewLeadingConstraint = NSLayoutConstraint(item: titleView, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1.0, constant: 0.0)
       let titleViewTrailingConstraint = NSLayoutConstraint(item: titleView, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1.0, constant: 0.0)
       let titleViewTopConstriant = NSLayoutConstraint(item: titleView, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 0.0)
+      let titleViewHeightConstraint = NSLayoutConstraint(item: titleView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .height, multiplier: 1.0, constant: titleViewHeight)
       
       view.addConstraints([titleViewLeadingConstraint,
                            titleViewTopConstriant,
-                           titleViewTrailingConstraint])
+                           titleViewTrailingConstraint,
+                           titleViewHeightConstraint])
       
       // Setup TitleLabel
       titleLabel.frame.size = titleView.frame.size
