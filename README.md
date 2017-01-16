@@ -51,6 +51,7 @@ alertController.hasRoundedCorners = true
 ```swift
 // Use an image instead of text
 alertController.titleImage = UIImage(named: "Turtle")
+// If you add an image to the title block, you may need to set restrictTitleViewHeight to true, depending on the image size
 
 // Change the color of the text
 alertController.titleTextColor = .black
@@ -119,7 +120,7 @@ $ brew install carthage
 ```
 To add JHTAlertController to your Xcode project using Carthage, update your Cartfile:
 ```
-github "jjessel/JHTAlertController" ~> 0.2.2
+github "jjessel/JHTAlertController" ~> 0.2.3
 ```
 Run ```carthage update``` to build the framework and drag the built JHTAlertController.framework into your Xcode project.
 
