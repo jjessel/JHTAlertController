@@ -96,6 +96,13 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       }
    }
    
+   /// The number of the lines to be used for the title block
+   public var titleNumberOfLines = 0 {
+      didSet {
+         titleLabel.numberOfLines = titleNumberOfLines
+      }
+    }
+   
    /// The text color for the title block
    public var titleTextColor = UIColor.white {
       didSet {
@@ -274,6 +281,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       titleLabel.textColor = titleTextColor
       titleLabel.font = titleFont
       titleLabel.text = title
+      titleLabel.numberOfLines = titleNumberOfLines
       titleLabel.textAlignment = .center
       titleView.addSubview(titleLabel)
       
