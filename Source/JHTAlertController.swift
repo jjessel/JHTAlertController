@@ -582,6 +582,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    /// - Returns: should return value
    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
       textField.resignFirstResponder()
+      textField.nextTextFieldField()?.becomeFirstResponder()
       return true
    }
    
@@ -605,4 +606,38 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
       return JHTAlertAnimation(isPresenting: false)
    }
+}
+
+extension UITextField{
+    // Author of extension: Imbru from StackOverflow
+    // Allows keyboard next/done buttons to function correctly with more than one field input.
+    func nextTextFieldField() -> UITextField?{
+        //field to return
+        var returnField : UITextField?
+        if self.superview != nil{
+            //for each view in superview
+            for (_, view) in self.superview!.subviews.enumerated(){
+                //if subview is a text's field
+                if view is UITextField {
+                    //cast curent view as text field
+                    let currentTextField = view as! UITextField
+                    //if text field is after the current one
+                    if currentTextField.frame.origin.y > self.frame.origin.y{
+                        //if there is no text field to return already
+                        if returnField == nil {
+                            //set as default return
+                            returnField = currentTextField
+                        }
+                            //else if this this less far than the other
+                        else if currentTextField.frame.origin.y < returnField!.frame.origin.y{
+                            //this is the field to return
+                            returnField = currentTextField
+                        }
+                    }
+                }
+            }
+        }
+        //end of the mdethod
+        return returnField
+    }
 }
