@@ -142,7 +142,8 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
       }
    }
    private var message: String!
-   
+   private var messageAttributed: NSAttributedString!
+    
    // MARK:  ButtonContainer
    private var buttonContainerView = UIStackView()
    
@@ -215,6 +216,110 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    private let textFieldCornerRadius: CGFloat = 4.0
    
    // MARK:- Initialization and Setup
+    
+    required convenience public init(message: NSAttributedString, preferredStyle: JHTAlertControllerStyle, iconImage: UIImage? = nil) {
+        self.init(nibName: nil, bundle: nil)
+        
+        self.messageAttributed = message
+        self.preferredStyle = preferredStyle
+        
+        self.providesPresentationContextTransitionStyle = true
+        self.definesPresentationContext = true
+        self.modalPresentationStyle = UIModalPresentationStyle.custom
+        self.transitioningDelegate = self
+        
+        
+        // Setup ContainerView
+        containerView.frame.size = CGSize(width: containerViewWidth, height:300)
+        containerView.backgroundColor = alertBackgroundColor
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.layer.cornerRadius = cornerRadius
+        containerView.clipsToBounds = true
+        view.addSubview(containerView)
+        
+        let containerViewCenterXConstraint = NSLayoutConstraint(item: containerView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        let containerViewCenterYConstraint = NSLayoutConstraint(item: containerView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        let containerViewHeightConstraint = NSLayoutConstraint(item: containerView, attribute: .height, relatedBy: .lessThanOrEqual, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0)
+        let containterViewWidthConstraint = NSLayoutConstraint(item: containerView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: containerViewWidth)
+        view.addConstraints([containerViewCenterXConstraint,
+                             containerViewCenterYConstraint,
+                             containterViewWidthConstraint,
+                             containerViewHeightConstraint])
+        
+        // Setup Image Circle
+        if iconImage != nil {
+            iconImageView = UIImageView(image: iconImage)
+            view.addSubview(iconImageView!)
+            iconImageView!.translatesAutoresizingMaskIntoConstraints = false
+            
+            let imageCenterX = NSLayoutConstraint(item: iconImageView!, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
+            let imageCenterY = NSLayoutConstraint(item: iconImageView!, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 5)
+            view.addConstraints([imageCenterX,
+                                 imageCenterY])
+        }
+        
+        // Setup TitleView
+        titleView.frame.size = CGSize(width: containerViewWidth, height: titleViewHeight)
+        titleView.backgroundColor = titleViewBackgroundColor
+        titleView.translatesAutoresizingMaskIntoConstraints = false
+        titleView.clipsToBounds = true
+        containerView.addSubview(titleView)
+        
+        let titleViewLeadingConstraint = NSLayoutConstraint(item: titleView, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1.0, constant: 0.0)
+        let titleViewTrailingConstraint = NSLayoutConstraint(item: titleView, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1.0, constant: 0.0)
+        let titleViewTopConstriant = NSLayoutConstraint(item: titleView, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 0.0)
+        let titleViewHeightConstraint = NSLayoutConstraint(item: titleView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .height, multiplier: 1.0, constant: titleViewHeight)
+        
+        view.addConstraints([titleViewLeadingConstraint,
+                             titleViewTopConstriant,
+                             titleViewTrailingConstraint,
+                             titleViewHeightConstraint])
+        
+        // Setup MessageView
+        messageView.frame.size = CGSize(width: containerViewWidth, height: titleViewHeight)
+        messageView.translatesAutoresizingMaskIntoConstraints = false
+        messageView.clipsToBounds = true
+        containerView.addSubview(messageView)
+        let messageViewLeadingConstraint = NSLayoutConstraint(item: messageView, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1.0, constant: 0.0)
+        let messageViewTrailingConstraint = NSLayoutConstraint(item: messageView, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1.0, constant: 0.0)
+        let messageViewBottomConstraint = NSLayoutConstraint(item: messageView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: containerView, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        let messageViewTopConstriant = NSLayoutConstraint(item: messageView, attribute: .top, relatedBy: .equal, toItem: titleView, attribute: .bottom, multiplier: 1.0, constant: 8.0)
+        view.addConstraints([messageViewLeadingConstraint,
+                             messageViewTopConstriant,
+                             messageViewTrailingConstraint,
+                             messageViewBottomConstraint])
+        
+        // Setup MessageLabel
+        messageLabel.frame.size = CGSize(width:containerViewWidth - 20, height:0.0)
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.numberOfLines = 0
+        messageLabel.minimumScaleFactor = 0.5
+        messageLabel.textAlignment = .center
+        messageLabel.font = messageFont
+        messageLabel.textColor = messageTextColor
+        messageLabel.attributedText = messageAttributed
+        messageView.addSubview(messageLabel)
+        
+        let messageLabelLeadingConstraint = NSLayoutConstraint(item: messageLabel, attribute: .leading, relatedBy: .equal, toItem: messageView, attribute: .leading, multiplier: 1.0, constant: 10.0)
+        let messageLabelTrailingConstraint = NSLayoutConstraint(item: messageLabel, attribute: .trailing, relatedBy: .equal, toItem: messageView, attribute: .trailing, multiplier: 1.0, constant:-10.0)
+        let messageLabelBottomConstraint = NSLayoutConstraint(item: messageLabel, attribute: .bottom, relatedBy: .equal, toItem: messageView, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        let messageLabelTopConstriant = NSLayoutConstraint(item: messageLabel, attribute: .top, relatedBy: .equal, toItem: messageView, attribute: .top, multiplier: 1.0, constant: 0.0)
+        view.addConstraints([messageLabelLeadingConstraint,
+                             messageLabelTopConstriant,
+                             messageLabelTrailingConstraint,
+                             messageLabelBottomConstraint])
+        
+        // Setup TextFieldContainerView
+        textFieldContainerView.frame.size = CGSize(width: containerViewWidth, height: 240.00)
+        textFieldContainerView.translatesAutoresizingMaskIntoConstraints = false
+        textFieldContainerView.clipsToBounds = true
+        textFieldContainerView.distribution = .fillEqually
+        textFieldContainerView.alignment = .fill
+        textFieldContainerView.axis = .vertical
+        textFieldContainerView.spacing = 4
+        
+        containerView.addSubview(textFieldContainerView)
+    }
    
    /// Initialize the JHTAlertController
    ///
@@ -259,8 +364,8 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
          view.addSubview(iconImageView!)
          iconImageView!.translatesAutoresizingMaskIntoConstraints = false
 
-         let imageCenterX = NSLayoutConstraint(item: iconImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
-         let imageCenterY = NSLayoutConstraint(item: iconImageView, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 5)
+         let imageCenterX = NSLayoutConstraint(item: iconImageView!, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
+         let imageCenterY = NSLayoutConstraint(item: iconImageView!, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1.0, constant: 5)
          view.addConstraints([imageCenterX,
                               imageCenterY])
       }
@@ -446,7 +551,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
                               heightConstraint,
                               widthConstraint])
          
-         let circlePath = UIBezierPath(arcCenter: CGPoint(x: shapeView.frame.maxX,y: shapeView.frame.maxY), radius: CGFloat(iconBackgroundRadius), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+         let circlePath = UIBezierPath(arcCenter: CGPoint(x: shapeView.frame.maxX,y: shapeView.frame.maxY), radius: CGFloat(iconBackgroundRadius), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
          
          shapeLayer = CAShapeLayer()
          shapeLayer.path = circlePath.cgPath
@@ -554,7 +659,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    ///
    /// - Parameter configurationHandler: the copletion of the textfield
    public func addTextFieldWithConfigurationHandler(configurationHandler: ((JHTTextField) -> Void)!) {
-      var textField = JHTTextField()
+    let textField = JHTTextField()
       textField.frame.size = CGSize(width: containerViewWidth, height: textFieldHeight)
       textField.borderStyle = textFieldBorderStyle
       textField.delegate = self
