@@ -610,7 +610,7 @@ public class JHTAlertController: UIViewController, UIViewControllerTransitioning
    /// The handler method for the action. This is where the code is executed.
    ///
    /// - Parameter sender: the UIButton that was pressed
-   public func buttonTapped(sender: UIButton) {
+   @objc public func buttonTapped(sender: UIButton) {
       self.dismiss(animated: true, completion: nil)
       sender.isSelected = true
       let action = buttonActions[sender.tag - 1]
