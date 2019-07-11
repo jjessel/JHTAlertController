@@ -1,3 +1,5 @@
+// swift-tools-version:5.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
 // Package.swift
 //
 // Copyright (c) 2016 Jacuzzi Hot Tubs, LLC
@@ -23,6 +25,11 @@
 import PackageDescription
 
 let package = Package(
-   name: "JHTAlertController",
-   exclude: ["Tests"]
+  name: "JHTAlertController",
+  platforms: [.iOS(.v9)],
+  products: [
+    .library(name: "JHTAlertController", targets: ["JHTAlertController"])
+  ],
+  targets: [.target(name: "JHTAlertController", path: "Source")],
+  swiftLanguageVersions: [.v5]
 )
